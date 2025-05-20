@@ -6,6 +6,6 @@ permalink: /contacts/
 
 # Контактна інформація
 
-- 📍 Адреса: [вкажіть адресу]
+- 📍 Адреса: [Feldstraße 53, 32791 Lage]
 - 📞 Телефон: [вкажіть номер]
-- ✉️ Email: [info@ueglage.org](mailto:info@ueglage.org)
+- ✉️ Email: [u.e.g.lage@gmail.com](mailto:u.e.g.lage@gmail.com)
