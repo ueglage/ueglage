@@ -1,0 +1,22 @@
+# _data/navigation.yml
+
+- title: "Головна"
+  url: "/"
+
+- title: "Про церкву"
+  url: "/about/"
+
+- title: "Розклад богослужінь"
+  url: "/schedule/"
+
+- title: "Малі домашні групи"
+  url: "/groups/"
+
+- title: "Фото та відео"
+  url: "/gallery/"
+
+- title: "Контакти"
+  url: "/contacts/"
+
+- title: "Пожертви"
+  url: "/donate/"
