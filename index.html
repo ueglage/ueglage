@@ -33,19 +33,17 @@
     .main-content ul {
       @apply list-disc list-inside space-y-4 mb-6; 
     }
-    .main-content h2 { /* Default styling for h2 inside main-content */
-      @apply text-2xl sm:text-3xl font-semibold mb-4; 
+    .main-content h2 { /* Default styling for h2 inside main-content (e.g. "Чим ми живемо...", "Наше бачення...") */
+      @apply text-3xl sm:text-4xl font-bold mb-4; /* Increased size, changed to font-bold */
     }
-     /* Specific styling for the first h2 "Про нас: Дім далеко від дому" if needed, or make it consistent */
-    .main-content .about-us-h2 {
-        @apply text-xl sm:text-2xl font-semibold mb-4;
+    .main-content .about-us-h2 { /* Specific styling for "Про нас: Дім далеко від дому" */
+        @apply text-2xl sm:text-3xl font-bold mb-4; /* Increased size, changed to font-bold */
     }
-
-    .contact-section { /* Style for the new content boxes */
+    .contact-section { /* Style for the content boxes */
       @apply bg-white/70 p-6 sm:p-8 rounded-lg shadow-lg;
     }
-    .welcome-text {
-      @apply text-2xl sm:text-3xl font-bold mb-8 text-center; /* Increased margin-bottom */
+    .welcome-text { /* For "Ласкаво просимо..." */
+      @apply text-3xl sm:text-4xl font-bold mb-8 text-center; /* Increased size, already font-bold */
     }
     .final-invitation {
       @apply mt-10 text-center font-semibold;
