@@ -30,12 +30,12 @@
       color: #2d3748; /* text-gray-800 for stronger emphasis */
     }
     .donation-box {
-      @apply bg-white/80 p-6 rounded-lg shadow-lg;
+      @apply bg-white/80 p-6 rounded-lg shadow-lg mb-8; /* Added margin-bottom */
     }
     .donation-box p, .donation-box li {
       @apply text-base sm:text-lg mb-2;
     }
-    .donation-box h3 {
+    .donation-box > h3 { /* Target the main h3 in donation-box */
       @apply text-xl sm:text-2xl font-semibold mb-4;
     }
   </style>
@@ -69,16 +69,16 @@
     </p>
 
     <div class="donation-box">
-      <h3 class="text-xl sm:text-2xl font-semibold mb-4">Наші банківські реквізити для пожертв:</h3>
+      <h3 class="text-xl sm:text-2xl font-semibold mb-4">Банківський переказ (IBAN):</h3>
       
-      <p><strong>Назва банку:</strong> Sparkasse Paderborn-Detmold-Höxter</p>
+      <p><strong>Назва банку (Bank):</strong> Sparkasse Paderborn-Detmold-Höxter</p>
       <p><strong>IBAN:</strong> DE38 4765 0130 0046 1374 10</p>
       <p><strong>BIC:</strong> WELADED1PAD</p>
       
       <div class="mt-4">
-        <p class="mb-1"><strong>Отримувач:</strong></p>
+        <p class="mb-1"><strong>Отримувач (Empfänger):</strong></p>
         <p class="text-sm sm:text-base text-gray-600 mb-2">
-          Оскільки рахунок спільний, для коректного зарахування на потреби церкви, будь ласка, вкажіть одного з наступних осіб як отримувача, або, якщо можливо, вкажіть "Ukrainische Evangelische Gemeinde Lage" (Українська Євангельська Церква м. Лаге) разом з одним із імен:
+          Для зарахування на рахунок церкви, будь ласка, вкажіть одного з наступних осіб як отримувача, або, якщо це можливо у вашому банку, "Ukrainische Evangelische Gemeinde Lage" разом з одним із імен:
         </p>
         <ul class="list-disc list-inside ml-4 text-base sm:text-lg">
           <li>Mykhailo Lazariv</li>
@@ -87,6 +87,19 @@
       </div>
 
       <p class="mt-4"><strong>Призначення платежу (Verwendungszweck):</strong> Пожертва на статутну діяльність церкви (або "Spende für kirchliche Zwecke")</p>
+    </div>
+
+    <div class="donation-box">
+        <h3 class="text-xl sm:text-2xl font-semibold mb-4 flex items-center">
+            <i class="fab fa-cc-mastercard text-3xl mr-3 text-orange-500"></i> Пожертви карткою Mastercard
+        </h3>
+        <p class="text-base sm:text-lg">
+            Наразі прямий прийом пожертв на номер картки не підтримується стандартними банківськими системами для переказів.
+            Ми розглядаємо можливість додавання безпечних методів прийому пожертв банківськими картками через спеціалізовані платіжні сервіси у майбутньому.
+        </p>
+        <p class="text-base sm:text-lg mt-2">
+            Якщо ви бажаєте зробити пожертву за допомогою картки або через інші платіжні системи (наприклад, PayPal, якщо така можливість буде доступна), будь ласка, <a href="contacts.html" class="text-blue-600 hover:underline">зв'яжіться з нами</a> для обговорення можливих варіантів.
+        </p>
     </div>
 
     <p class="text-center mt-8 text-base sm:text-lg">
