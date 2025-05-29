@@ -15,6 +15,7 @@
       font-family: 'Open Sans', sans-serif;
       color: #4a5568; /* text-gray-700 */
     }
+    /* Загальне визначення для h1-h6 залишається для font-family та color */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
       color: #000000; /* text-black */
@@ -33,18 +34,17 @@
     .main-content ul {
       @apply list-disc list-inside space-y-4 mb-6; 
     }
-    .main-content h2 { /* Default styling for h2 inside main-content (e.g. "Чим ми живемо...", "Наше бачення...") */
-      @apply text-3xl sm:text-4xl font-bold mb-4; /* Increased size, changed to font-bold */
+    /* Видаляємо специфічні @apply для розміру/ваги .main-content h2 та .about-us-h2, оскільки вони тепер в HTML */
+    .main-content h2 { /* Залишаємо тільки спільні стилі, якщо є, наприклад, відступи */
+      @apply mb-4; /* Зберігаємо нижній відступ */
     }
-    .main-content .about-us-h2 { /* Specific styling for "Про нас: Дім далеко від дому" */
-        @apply text-2xl sm:text-3xl font-bold mb-4; /* Increased size, changed to font-bold */
+    .main-content .about-us-h2 { /* Також тільки спільні, якщо є */
+        @apply mb-4;
     }
     .contact-section { /* Style for the content boxes */
       @apply bg-white/70 p-6 sm:p-8 rounded-lg shadow-lg;
     }
-    .welcome-text { /* For "Ласкаво просимо..." */
-      @apply text-3xl sm:text-4xl font-bold mb-8 text-center; /* Increased size, already font-bold */
-    }
+    /* .welcome-text клас більше не потрібен для визначення розміру/ваги, оскільки вони в HTML */
     .final-invitation {
       @apply mt-10 text-center font-semibold;
     }
@@ -69,15 +69,15 @@
     </nav>
   </header>
   <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto main-content">
-    <h1 class="welcome-text">Ласкаво просимо до нашої Церкви!</h1>
+    <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-center">Ласкаво просимо до нашої Церкви!</h1>
 
     <div class="contact-section mb-12 sm:mb-16">
-      <h2 class="about-us-h2">Про нас: Дім далеко від дому</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4">Про нас: Дім далеко від дому</h2>
       <p>Ми – жива та дружня українська християнська громада, що знайшла свій духовний дім тут, у Німеччині. Нас об'єднує глибока любов до Бога, щире бажання служити ближньому та спільна українська душа. Наша церква – це не просто місце зустрічей; це простір, де Бог торкається сердець та змінює життя на краще. Ми віримо, що саме тут, у колі однодумців, кожен може віднайти справжню підтримку, непохитну надію та безмежну любов, якої так прагне душа.</p>
     </div>
 
     <div class="contact-section mb-12 sm:mb-16">
-      <h2>Чим ми живемо та що робимо?</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Чим ми живемо та що робимо?</h2>
       <p>Наша діяльність наповнена вірою, спілкуванням та служінням:</p>
       <ul>
         <li><strong>Ділимося Благою Звісткою:</strong> Ми з радістю проповідуємо Євангеліє – вічно актуальну звістку про спасіння, надію та нове життя через віру в Ісуса Христа.</li>
@@ -88,7 +88,7 @@
     </div>
 
     <div class="contact-section mb-12 sm:mb-16">
-      <h2>Наше бачення: Церква – це ми</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Наше бачення: Церква – це ми</h2>
       <p>Ми глибоко переконані, що:</p>
       <ul>
         <li><strong>Церква – це не стіни, а люди,</strong> об'єднані спільною вірою та любов'ю. Кожен із нас – важлива частина великої Божої родини.</li>
