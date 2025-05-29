@@ -13,9 +13,11 @@
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
+      color: #4a5568; /* text-gray-700 */
     }
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
+      color: #000000; /* text-black */
     }
     .nav-link {
       @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-blue-600 hover:text-yellow-50 transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
@@ -24,23 +26,39 @@
       @apply text-blue-600 hover:text-blue-800 hover:underline;
     }
     .contact-section {
-      @apply bg-white/70 p-5 rounded-lg shadow-md mb-8;
+      @apply bg-white/70 p-5 sm:p-6 rounded-lg shadow-md mb-10 sm:mb-12; /* Increased bottom margin */
     }
     .contact-person {
-      @apply mb-4;
+      @apply mb-5 sm:mb-6; /* Increased bottom margin */
     }
     .contact-person p.font-semibold {
-      @apply text-lg text-blue-700;
+       color: #000000; /* text-black for names */
+      @apply text-lg sm:text-xl;
+    }
+    .contact-person ul li, .contact-section p, .contact-section a {
+        color: #4a5568; /* text-gray-700 */
+    }
+    .contact-person ul {
+        @apply space-y-2 sm:space-y-2.5; /* Increased spacing in lists */
+    }
+    .social-item {
+        @apply flex flex-col sm:flex-row items-center mb-4 sm:mb-5; /* Align QR code and link */
+    }
+    .social-link-text {
+        @apply text-base sm:text-lg;
+    }
+    .qr-code {
+        @apply w-20 h-20 sm:w-24 sm:h-24 object-contain mt-2 sm:mt-0 sm:ml-4;
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen text-gray-800">
+<body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen">
   <header class="text-center py-6 bg-white shadow-lg">
-    <img src="a.png" alt="Логотип церкви" class="mx-auto w-32 h-32">
-    <h1 class="text-4xl font-bold mt-4 text-blue-900">U.E.G.Lage</h1>
-    <p class="text-xl text-blue-800">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-xl text-blue-800">Українська Євангельська Церква м. Лаге</p>
-    <nav class="mt-6">
+    <img src="a.png" alt="Логотип церкви" class="mx-auto w-28 h-28 sm:w-32 sm:h-32">
+    <h1 class="text-3xl sm:text-4xl font-bold mt-3 sm:mt-4">U.E.G.Lage</h1>
+    <p class="text-lg sm:text-xl text-gray-700">Ukrainische Evangelische Gemeinde Lage</p>
+    <p class="text-lg sm:text-xl text-gray-700">Українська Євангельська Церква м. Лаге</p>
+    <nav class="mt-5 sm:mt-6">
       <ul class="flex flex-wrap justify-center gap-3 sm:gap-4">
         <li><a href="index.html" class="nav-link">Головна</a></li>
         <li><a href="about.html" class="nav-link">Про церкву</a></li>
@@ -52,28 +70,28 @@
       </ul>
     </nav>
   </header>
-  <main class="px-4 py-10 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-8 text-blue-800">Контакти</h2>
+  <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">Контакти</h2>
 
     <div class="contact-section">
-      <h3 class="text-2xl font-bold mb-4 text-blue-700">Телефони:</h3>
-      <div class="space-y-5">
+      <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">Телефони:</h3>
+      <div class="space-y-6"> {/* Increased spacing between persons */}
         <div class="contact-person">
           <p class="font-semibold">Віктор:</p>
-          <ul class="list-none ml-4 space-y-1">
+          <ul class="list-none ml-2 sm:ml-4">
             <li><i class="fab fa-whatsapp text-green-500 mr-2"></i> <a href="https://wa.me/4915120503835" target="_blank" class="contact-link">+49 151 2050 3835 (WhatsApp)</a></li>
             <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380968113453" class="contact-link">+380 96 811 3453 (Viber)</a></li>
           </ul>
         </div>
         <div class="contact-person">
           <p class="font-semibold">Михайло:</p>
-          <ul class="list-none ml-4 space-y-1">
+          <ul class="list-none ml-2 sm:ml-4">
             <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380979400603" class="contact-link">+380 97 940 0603 (Viber)</a></li>
           </ul>
         </div>
         <div class="contact-person">
           <p class="font-semibold">Валерій:</p>
-          <ul class="list-none ml-4 space-y-1">
+          <ul class="list-none ml-2 sm:ml-4">
             <li><i class="fab fa-telegram text-blue-500 mr-2"></i> <a href="https://t.me/+491704154006" target="_blank" class="contact-link">+49 170 4154 006 (Telegram)</a></li>
             <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380935714550" class="contact-link">+380 93 571 4550 (Viber)</a></li>
             <li><i class="fab fa-whatsapp text-green-500 mr-2"></i> <a href="https://wa.me/380935714550" target="_blank" class="contact-link">+380 93 571 4550 (WhatsApp)</a></li>
@@ -81,7 +99,7 @@
         </div>
         <div class="contact-person">
           <p class="font-semibold">Петро:</p>
-          <ul class="list-none ml-4 space-y-1">
+          <ul class="list-none ml-2 sm:ml-4">
             <li><i class="fab fa-whatsapp text-green-500 mr-2"></i> <a href="https://wa.me/4915172812211" target="_blank" class="contact-link">+49 151 7281 2211 (WhatsApp)</a></li>
             <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380504939608" class="contact-link">+380 50 493 9608 (Viber)</a></li>
           </ul>
@@ -90,32 +108,66 @@
     </div>
 
     <div class="contact-section">
-        <h3 class="text-2xl font-bold mb-3 text-blue-700">Електронна пошта:</h3>
-        <p class="flex items-center text-lg">
+        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Електронна пошта:</h3>
+        <p class="flex items-center text-base sm:text-lg">
             <i class="fas fa-envelope text-gray-600 mr-3"></i>
             <a href="mailto:u.e.g.lage@gmail.com" class="contact-link">u.e.g.lage@gmail.com</a>
         </p>
     </div>
 
     <div class="contact-section">
-      <h3 class="text-2xl font-bold mb-3 text-blue-700">Адреса:</h3>
-      <a href="https://www.google.com/maps/place/%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0+%D0%84%D0%B2%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0+%D0%A6%D0%B5%D1%80%D0%BA%D0%B2%D0%B0+-+U.E.G.Lage/@51.9912196,8.8075361,21z/data=!4m6!3m5!1s0x47ba417201ac94c5:0xc5a6eeaa185a47f9!8m2!3d51.9912602!4d8.8076695!16s%2Fg%2F11stj2wxr5?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center text-lg contact-link"> <i class="fas fa-map-marker-alt text-red-500 mr-3"></i> Feldstraße 53, 32791 Lage
+      <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Адреса:</h3>
+      <a href="https://www.google.com/maps/search/?api=1&query=Feldstraße+53,+32791+Lage" target="_blank" class="flex items-center text-base sm:text-lg contact-link mb-3">
+        <i class="fas fa-map-marker-alt text-red-500 mr-3"></i> Feldstraße 53, 32791 Lage
       </a>
-      <p class="ml-8 text-sm text-gray-600">(натисніть на адресу, щоб відкрити на Google Картах)</p>
+      <p class="ml-8 text-xs sm:text-sm text-gray-600 mb-4">(натисніть на адресу, щоб відкрити на Google Картах)</p>
+      <div>
+        <iframe src="https://maps.google.com/maps?q=Feldstra%C3%9Fe%2053%2C%2032791%20Lage&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
 
     <div class="contact-section">
-      <h3 class="text-2xl font-bold mb-4 text-blue-700">Ми в соціальних мережах:</h3>
-      <ul class="list-none space-y-3 text-lg">
-        <li><i class="fab fa-youtube text-red-600 mr-2"></i> <a href="https://www.youtube.com/@ueglage" target="_blank" class="contact-link">YouTube</a></li>
-        <li><i class="fab fa-instagram text-pink-600 mr-2"></i> <a href="https://www.instagram.com/u.e.g.lage" target="_blank" class="contact-link">Instagram</a></li>
-        <li><i class="fab fa-telegram-plane text-blue-500 mr-2"></i> <a href="https://t.me/ueglage_bot" target="_blank" class="contact-link">Telegram Bot: @ueglage_bot</a></li>
-        <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="https://invite.viber.com/?g2=AQAYTXdpUlzyTk87MiRKZcwFudBLHfIFoRMx0xqEhv2PKmhNuZvNOkDeiVYC87k%2F" target="_blank" class="contact-link">Viber Група</a></li>
+      <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">Ми в соціальних мережах:</h3>
+      <ul class="list-none space-y-5 sm:space-y-6">
+        <li class="social-item">
+          <div class="flex items-center">
+            <i class="fab fa-youtube text-red-600 mr-2 text-2xl"></i>
+            <a href="https://www.youtube.com/@ueglage" target="_blank" class="contact-link social-link-text">YouTube</a>
+          </div>
+          <img src="U.E.G.Lage - YouTube.png" alt="QR Code YouTube" class="qr-code">
+        </li>
+        <li class="social-item">
+          <div class="flex items-center">
+            <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
+            <a href="https://www.instagram.com/u.e.g.lage" target="_blank" class="contact-link social-link-text">Instagram</a>
+          </div>
+          <img src="U.E.G.Lage - Instagram.png" alt="QR Code Instagram" class="qr-code">
+        </li>
+         <li class="social-item">
+          <div class="flex items-center">
+            <i class="fab fa-facebook text-blue-600 mr-2 text-2xl"></i>
+            <a href="https://www.facebook.com/groups/199733423150258" target="_blank" class="contact-link social-link-text">Facebook група</a>
+          </div>
+          <img src="U.E.G.Lage - Facebook.png" alt="QR Code Facebook" class="qr-code">
+        </li>
+        <li class="social-item">
+            <div class="flex items-center">
+                <i class="fab fa-telegram-plane text-blue-500 mr-2 text-2xl"></i>
+                <a href="https://t.me/ueglage_bot" target="_blank" class="contact-link social-link-text">Telegram Bot: @ueglage_bot</a>
+            </div>
+            </li>
+        <li class="social-item">
+          <div class="flex items-center">
+            <i class="fab fa-viber text-purple-600 mr-2 text-2xl"></i>
+            <a href="https://invite.viber.com/?g2=AQAYTXdpUlzyTk87MiRKZcwFudBLHfIFoRMx0xqEhv2PKmhNuZvNOkDeiVYC87k%2F" target="_blank" class="contact-link social-link-text">Viber Група</a>
+          </div>
+          <img src="U.E.G.Lage - Viber.png" alt="QR Code Viber" class="qr-code">
+        </li>
       </ul>
     </div>
   </main>
-  <footer class="text-center text-sm py-8 bg-white mt-12 shadow-inner">
-    © <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге
+  <footer class="text-center text-sm py-6 sm:py-8 bg-white mt-10 sm:mt-12 shadow-inner">
+    <p class="text-gray-600">&copy; <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
