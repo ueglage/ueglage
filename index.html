@@ -22,18 +22,26 @@
     .nav-link {
       @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-blue-600 hover:text-yellow-50 transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
     }
-    .main-content p, .main-content ul li {
+    .main-content p {
       color: #4a5568; /* text-gray-700 */
-      @apply text-base sm:text-lg leading-relaxed mb-4; /* Standardized text size, leading and bottom margin */
+      @apply text-base sm:text-lg leading-relaxed mb-4; /* Standardized text size, leading and bottom margin for paragraphs */
+    }
+    .main-content ul li { /* Styling for list items */
+      color: #4a5568; /* text-gray-700 */
+      @apply text-base sm:text-lg leading-relaxed; /* No bottom margin here, space-y on ul will handle it */
+    }
+    .main-content ul {
+      @apply list-disc list-inside space-y-4 mb-6; /* Increased space-y-4 for 1rem spacing between items */
     }
     .main-content h2 {
       @apply text-2xl sm:text-3xl font-semibold mb-5 mt-8; /* Added top margin to headings */
     }
-    .main-content h2:first-of-type {
-        @apply mt-0; /* Remove top margin from the very first h2 */
+    .main-content h2:first-of-type { /* Adjusted for the new structure, might need to target specifically if h1 is considered */
+        @apply mt-0; 
     }
-    .main-content ul {
-      @apply list-disc list-inside space-y-2 mb-6; /* Adjusted list styling */
+    /* If the first content heading is the h2 "Про нас: Дім далеко від дому", it should not have extra top margin */
+    main > h2.text-xl { /* Targeting the specific "Про нас: Дім далеко від дому" heading */
+        @apply mt-0;
     }
     .welcome-text {
       @apply text-2xl sm:text-3xl font-bold mb-6 text-center;
