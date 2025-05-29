@@ -36,31 +36,20 @@
        color: #000000;
       @apply text-lg sm:text-xl;
     }
-    .contact-person ul li, .contact-section p, .contact-section a:not(.nav-link) { /* Exclude nav-link if it were ever used here */
+    .contact-person ul li, .contact-section p, .contact-section a:not(.nav-link) {
         color: #4a5568;
     }
-     .contact-section .contact-link { /* Ensure contact links within sections get their specific blue color */
+     .contact-section .contact-link {
         @apply text-blue-600 hover:text-blue-800 hover:underline;
      }
     .contact-person ul {
         @apply space-y-2 sm:space-y-2.5;
     }
-    .social-item {
-        @apply flex flex-col sm:flex-row items-center justify-between mb-4 sm:mb-5;
-    }
-    .social-link-container {
-        @apply flex items-center;
+    .social-item { /* Adjusted for link only */
+        @apply flex items-center mb-3 sm:mb-4;
     }
     .social-link-text {
-        @apply text-base sm:text-lg;
-    }
-    .qr-code {
-      /* Smaller default size for QR codes, added cursor-pointer */
-      @apply w-12 h-12 sm:w-16 sm:h-16 object-contain mt-2 sm:mt-0 sm:ml-4 cursor-pointer transition-transform duration-200 hover:scale-110;
-    }
-    /* Modal styles */
-    .modal-hidden {
-        display: none;
+        @apply text-base sm:text-lg ml-2; /* Added ml-2 for spacing from icon */
     }
   </style>
 </head>
@@ -140,40 +129,26 @@
 
     <div class="contact-section">
       <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">Ми в соціальних мережах:</h3>
-      <ul class="list-none space-y-5 sm:space-y-6">
+      <ul class="list-none space-y-3 sm:space-y-4"> {/* Adjusted spacing for list items */ }
         <li class="social-item">
-          <div class="social-link-container">
             <i class="fab fa-youtube text-red-600 mr-2 text-2xl"></i>
             <a href="https://www.youtube.com/@ueglage" target="_blank" class="contact-link social-link-text">YouTube</a>
-          </div>
-          <img src="U.E.G.Lage - YouTube.png" alt="QR Code YouTube" class="qr-code clickable-qr">
         </li>
         <li class="social-item">
-          <div class="social-link-container">
             <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
             <a href="https://www.instagram.com/u.e.g.lage" target="_blank" class="contact-link social-link-text">Instagram</a>
-          </div>
-          <img src="U.E.G.Lage - Instagram.png" alt="QR Code Instagram" class="qr-code clickable-qr">
         </li>
          <li class="social-item">
-          <div class="social-link-container">
             <i class="fab fa-facebook text-blue-600 mr-2 text-2xl"></i>
             <a href="https://www.facebook.com/groups/199733423150258" target="_blank" class="contact-link social-link-text">Facebook група</a>
-          </div>
-          <img src="U.E.G.Lage - Facebook.png" alt="QR Code Facebook" class="qr-code clickable-qr">
         </li>
         <li class="social-item">
-            <div class="social-link-container">
-                <i class="fab fa-telegram-plane text-blue-500 mr-2 text-2xl"></i>
-                <a href="https://t.me/ueglage_bot" target="_blank" class="contact-link social-link-text">Telegram Bot: @ueglage_bot</a>
-            </div>
-            </li>
+            <i class="fab fa-telegram-plane text-blue-500 mr-2 text-2xl"></i>
+            <a href="https://t.me/ueglage_bot" target="_blank" class="contact-link social-link-text">Telegram Bot: @ueglage_bot</a>
+        </li>
         <li class="social-item">
-          <div class="social-link-container">
             <i class="fab fa-viber text-purple-600 mr-2 text-2xl"></i>
             <a href="https://invite.viber.com/?g2=AQAYTXdpUlzyTk87MiRKZcwFudBLHfIFoRMx0xqEhv2PKmhNuZvNOkDeiVYC87k%2F" target="_blank" class="contact-link social-link-text">Viber Група</a>
-          </div>
-          <img src="U.E.G.Lage - Viber.png" alt="QR Code Viber" class="qr-code clickable-qr">
         </li>
       </ul>
     </div>
@@ -182,52 +157,9 @@
     <p class="text-gray-600">© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
   </footer>
 
-  <div id="qrModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 modal-hidden z-50">
-    <div class="bg-white p-5 rounded-lg shadow-xl relative max-w-xs w-full">
-      <img id="modalQrImage" src="" alt="Збільшений QR-код" class="w-full h-auto object-contain">
-      <button id="closeQrModalButton" class="absolute top-2 right-3 text-black hover:text-gray-700 text-3xl font-bold">&times;</button>
-    </div>
-  </div>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const qrModal = document.getElementById('qrModal');
-      const modalQrImage = document.getElementById('modalQrImage');
-      const closeQrModalButton = document.getElementById('closeQrModalButton');
-      const clickableQrs = document.querySelectorAll('.clickable-qr');
-
-      clickableQrs.forEach(qr => {
-        // Ensure the QR image itself is clickable, not interfering with the text link
-        qr.addEventListener('click', function(event) {
-          event.stopPropagation(); // Prevent event from bubbling up if nested
-          modalQrImage.src = this.src;
-          qrModal.classList.remove('modal-hidden');
-        });
-      });
-
-      function closeModal() {
-        qrModal.classList.add('modal-hidden');
-        modalQrImage.src = ""; 
-      }
-
-      closeQrModalButton.addEventListener('click', closeModal);
-      
-      // Close modal by clicking on the backdrop
-      qrModal.addEventListener('click', function(event) {
-        if (event.target === qrModal) {
-          closeModal();
-        }
-      });
-
-      // Close modal with Escape key
-      document.addEventListener('keydown', function(event) {
-        if (event.key === "Escape" && !qrModal.classList.contains('modal-hidden')) {
-          closeModal();
-        }
-      });
-    });
+    // JavaScript for QR modal has been removed.
   </script>
 </body>
 </html>
