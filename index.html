@@ -6,48 +6,66 @@
   <title>Головна | U.E.G.Lage</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="a.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+    .nav-link {
+      @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-blue-600 hover:text-yellow-50 transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen text-gray-800">
-  <header class="text-center py-6 bg-white shadow-md">
+  <header class="text-center py-6 bg-white shadow-lg">
     <img src="a.png" alt="Логотип церкви" class="mx-auto w-32 h-32">
-    <h1 class="text-3xl font-bold mt-4">U.E.G.Lage</h1>
-    <p class="text-lg">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-lg">Українська Євангельська Церква м. Лаге</p>
+    <h1 class="text-4xl font-bold mt-4 text-blue-900">U.E.G.Lage</h1>
+    <p class="text-xl text-blue-800">Ukrainische Evangelische Gemeinde Lage</p>
+    <p class="text-xl text-blue-800">Українська Євангельська Церква м. Лаге</p>
     <nav class="mt-6">
-      <ul class="flex flex-wrap justify-center gap-4 text-blue-800 font-medium">
-        <li><a href="index.html" class="hover:underline">Головна</a></li>
-        <li><a href="about.html" class="hover:underline">Про церкву</a></li>
-        <li><a href="schedule.html" class="hover:underline">Розклад богослужінь</a></li>
-        <li><a href="groups.html" class="hover:underline">Малі групи</a></li>
-        <li><a href="gallery.html" class="hover:underline">Фото / відео</a></li>
-        <li><a href="contacts.html" class="hover:underline">Контакти</a></li>
-        <li><a href="donate.html" class="hover:underline">Пожертви</a></li>
+      <ul class="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <li><a href="index.html" class="nav-link">Головна</a></li>
+        <li><a href="about.html" class="nav-link">Про церкву</a></li>
+        <li><a href="schedule.html" class="nav-link">Розклад богослужінь</a></li>
+        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
+        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
+        <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
       </ul>
     </nav>
   </header>
-  <main class="px-4 py-8 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">Про нас</h2>
-    <p class="mb-4">Ми - українська громада християн у Німеччині, яка об'єднана любов'ю до Бога та бажанням служити один одному. Церква, в якій Бог змінює життя. Тут кожен може знайти підтримку, надію та любов.</p>
+  <main class="px-4 py-10 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-blue-800">Про нас</h2>
+    <p class="mb-6 text-lg leading-relaxed">Ми - українська громада християн у Німеччині, яка об'єднана любов'ю до Бога та бажанням служити один одному. Церква, в якій Бог змінює життя. Тут кожен може знайти підтримку, надію та любов.</p>
 
-    <h2 class="text-2xl font-semibold mb-4">Що робимо?</h2>
-    <ul class="list-disc list-inside mb-4">
+    <h2 class="text-3xl font-semibold mb-6 text-blue-800">Що робимо?</h2>
+    <ul class="list-disc list-inside mb-6 space-y-2 text-lg leading-relaxed">
       <li>Проповідуємо Євангеліє - добру звістку про спасіння через Ісуса Христа.</li>
       <li>Молимось разом - за родини, Україну, мир, зцілення і потреби людей.</li>
       <li>Підтримуємо одне одного - духовно, емоційно та практично.</li>
       <li>Організовуємо зустрічі для молоді, дітей, жінок та чоловіків.</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold mb-4">Наше бачення</h2>
-    <ul class="list-disc list-inside mb-4">
+    <h2 class="text-3xl font-semibold mb-6 text-blue-800">Наше бачення</h2>
+    <ul class="list-disc list-inside mb-6 space-y-2 text-lg leading-relaxed">
       <li>Церква - це не будівля, а люди.</li>
       <li>Любов - це мова, яку розуміє кожен.</li>
       <li>Віра - це шлях, на якому ніхто не має йти наодинці.</li>
     </ul>
 
-    <p class="mt-8">Відкрий серце для чогось більшого. Ми раді тобі незалежно від віку, досвіду чи минулого.</p>
+    <p class="mt-10 text-lg leading-relaxed">Відкрий серце для чогось більшого. Ми раді тобі незалежно від віку, досвіду чи минулого.</p>
   </main>
-  <footer class="text-center text-sm py-6 bg-white mt-12 shadow-inner">
-    &copy; 2025 U.E.G.Lage | Українська Євангельська Церква м. Лаге
+  <footer class="text-center text-sm py-8 bg-white mt-16 shadow-inner">
+    &copy; <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге
   </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
