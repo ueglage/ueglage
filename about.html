@@ -1,37 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Про церкву | U.E.G.Lage</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="a.png">
+  <title>Про церкву | Ueglage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      padding: 1rem;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding-left: 0;
+      margin: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background: #0066cc;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background: #003366;
+    }
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen text-gray-800">
-  <header class="text-center py-6 bg-white shadow-md">
-    <img src="a.png" alt="Логотип церкви" class="mx-auto w-32 h-32">
-    <h1 class="text-3xl font-bold mt-4">U.E.G.Lage</h1>
-    <p class="text-lg">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-lg">Українська Євангельська Церква м. Лаге</p>
-    <nav class="mt-6">
-      <ul class="flex flex-wrap justify-center gap-4 text-blue-800 font-medium">
-        <li><a href="index.html" class="hover:underline">Головна</a></li>
-        <li><a href="about.html" class="hover:underline">Про церкву</a></li>
-        <li><a href="schedule.html" class="hover:underline">Розклад богослужінь</a></li>
-        <li><a href="groups.html" class="hover:underline">Малі групи</a></li>
-        <li><a href="gallery.html" class="hover:underline">Фото / відео</a></li>
-        <li><a href="contacts.html" class="hover:underline">Контакти</a></li>
-        <li><a href="donate.html" class="hover:underline">Пожертви</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="px-4 py-8 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">Про церкву</h2>
-    <p>Тут буде інформація розділу <strong>Про церкву</strong>.</p>
-  </main>
-  <footer class="text-center text-sm py-6 bg-white mt-12 shadow-inner">
-    &copy; 2025 U.E.G.Lage | Українська Євангельська Церква м. Лаге
-  </footer>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Ueglage</div>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="about.html">Про церкву</a></li>
+      <li><a href="schedule.html">Розклад</a></li>
+      <li><a href="groups.html">Малі групи</a></li>
+      <li><a href="media.html">Фото / Відео</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li><a href="donate.html">Пожертви</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Про нашу церкву</h1>
+  <p>Церква Ueglage — це спільнота віруючих людей, об'єднаних любов'ю до Бога і ближнього. Ми прагнемо служити одне одному, поширювати Добру Звістку та зростати духовно разом.</p>
+  <p>Наші служіння відкриті для всіх. Ми віримо, що кожна людина цінна в очах Бога і має унікальне покликання.</p>
+  <p>Приєднуйтесь до нашої громади, разом ми зможемо змінювати світ навколо на краще.</p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Церква Ueglage. Всі права захищені.</p>
+</footer>
+
 </body>
 </html>
