@@ -26,8 +26,8 @@
       @apply text-blue-600 hover:text-blue-800 hover:underline;
     }
     .contact-section {
-      /* Increased bottom margin for more space between sections */
-      @apply bg-white/70 p-5 sm:p-6 rounded-lg shadow-md mb-16 sm:mb-20;
+      /* Base styles for contact section; margin-bottom is now applied directly in HTML */
+      @apply bg-white/70 pt-8 pb-5 sm:pt-10 sm:pb-6 rounded-lg shadow-md;
     }
     .contact-person {
       @apply mb-5 sm:mb-6;
@@ -45,11 +45,11 @@
     .contact-person ul {
         @apply space-y-2 sm:space-y-2.5;
     }
-    .social-item { /* Adjusted for link only */
+    .social-item { 
         @apply flex items-center mb-3 sm:mb-4;
     }
     .social-link-text {
-        @apply text-base sm:text-lg ml-2; /* Added ml-2 for spacing from icon */
+        @apply text-base sm:text-lg ml-2; 
     }
   </style>
 </head>
@@ -72,9 +72,9 @@
     </nav>
   </header>
   <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto">
-    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">Контакти</h2>
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">Контакти</h2>
 
-    <div class="contact-section">
+    <div class="contact-section mb-12 sm:mb-16">
       <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">Телефони:</h3>
       <div class="space-y-6">
         <div class="contact-person">
@@ -108,7 +108,7 @@
       </div>
     </div>
 
-    <div class="contact-section">
+    <div class="contact-section mb-12 sm:mb-16">
         <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Електронна пошта:</h3>
         <p class="flex items-center text-base sm:text-lg">
             <i class="fas fa-envelope text-gray-500 mr-3"></i>
@@ -116,7 +116,7 @@
         </p>
     </div>
 
-    <div class="contact-section">
+    <div class="contact-section mb-12 sm:mb-16">
       <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">Ми в соціальних мережах:</h3>
       <ul class="list-none space-y-3 sm:space-y-4">
         <li class="social-item">
@@ -142,9 +142,9 @@
       </ul>
     </div>
 
-    <div class="contact-section">
+    <div class="contact-section mb-12 sm:mb-16"> 
       <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Адреса:</h3>
-      <a href="https://www.google.com/maps/search/?api=1&query=Feldstraße+53,+32791+Lage" target="_blank" class="flex items-center text-base sm:text-lg contact-link mb-3">
+      <a href="https://www.google.com/maps/place/%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0+%D0%84%D0%B2%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0+%D0%A6%D0%B5%D1%80%D0%BA%D0%B2%D0%B0+-+U.E.G.Lage/@51.9912309,8.8079598,20.5z/data=!4m6!3m5!1s0x47ba417201ac94c5:0xc5a6eeaa185a47f9!8m2!3d51.9912602!4d8.8076695!16s%2Fg%2F11stj2wxr5?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center text-base sm:text-lg contact-link mb-3">
         <i class="fas fa-map-marker-alt text-red-500 mr-3"></i> Feldstraße 53, 32791 Lage
       </a>
       <p class="ml-8 text-xs sm:text-sm text-gray-600 mb-4">(натисніть на адресу, щоб відкрити на Google Картах)</p>
