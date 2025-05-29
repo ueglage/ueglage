@@ -25,6 +25,11 @@
     .schedule-item p {
        color: #4a5568; /* text-gray-700 */
     }
+    .schedule-item h3 i {
+        color: #4f46e5; /* indigo-600, for a nice accent */
+        width: 1.5em; /* Ensure icons have similar visual weight/spacing */
+        text-align: center;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen">
@@ -46,27 +51,42 @@
     </nav>
   </header>
   <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto">
-    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">Розклад зібрань та заходів</h2>
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">Розклад зібрань та заходів</h2>
     <div class="space-y-5 text-base sm:text-lg schedule-item">
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1">Зібрання:</h3>
-        <p>Щонеділі о 12:30</p>
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-calendar-check mr-3"></i>
+          Зібрання:
+        </h3>
+        <p class="pl-8">Щонеділі о 12:30</p>
       </div>
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1">Молодіжні спілкування:</h3>
-        <p>Щонеділі о 17:00</p>
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-users mr-3"></i>
+          Молодіжні спілкування:
+        </h3>
+        <p class="pl-8">Щонеділі о 17:00</p>
       </div>
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1">Підліткові TEENY LAGE:</h3>
-        <p>Субота о 16:00</p>
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-rocket mr-3"></i>
+          Підліткові TEENY LAGE:
+        </h3>
+        <p class="pl-8">Субота о 16:00</p>
       </div>
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1">Розбір Слова Божого:</h3>
-        <p>Щочетверга о 19:00</p>
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-book-bible mr-3"></i>
+          Розбір Слова Божого:
+        </h3>
+        <p class="pl-8">Щочетверга о 19:00</p>
       </div>
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1">Волейбол (Спортивне служіння для молоді):</h3>
-        <p>Щосереди о 18:00</p>
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-volleyball mr-3"></i>
+          Волейбол (Спортивне служіння для молоді):
+        </h3>
+        <p class="pl-8">Щосереди о 18:00</p>
       </div>
     </div>
   </main>
