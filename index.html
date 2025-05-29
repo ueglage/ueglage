@@ -1,53 +1,99 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Головна | U.E.G.Lage</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="a.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Головна | Церква Ueglage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #004080;
+      padding: 1rem 0;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background-color: #0066cc;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #003366;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen text-gray-800">
-  <header class="text-center py-6 bg-white shadow-md">
-    <img src="a.png" alt="Логотип церкви" class="mx-auto w-32 h-32">
-    <h1 class="text-3xl font-bold mt-4">U.E.G.Lage</h1>
-    <p class="text-lg">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-lg">Українська Євангельська Церква м. Лаге</p>
-    <nav class="mt-6">
-      <ul class="flex flex-wrap justify-center gap-4 text-blue-800 font-medium">
-        <li><a href="index.html" class="hover:underline">Головна</a></li>
-        <li><a href="about.html" class="hover:underline">Про церкву</a></li>
-        <li><a href="schedule.html" class="hover:underline">Розклад богослужінь</a></li>
-        <li><a href="groups.html" class="hover:underline">Малі групи</a></li>
-        <li><a href="gallery.html" class="hover:underline">Фото / відео</a></li>
-        <li><a href="contacts.html" class="hover:underline">Контакти</a></li>
-        <li><a href="donate.html" class="hover:underline">Пожертви</a></li>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Ueglage</div>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про церкву</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="groups.html">Малі групи</a></li>
+        <li><a href="media.html">Фото / Відео</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+        <li><a href="donate.html">Пожертви</a></li>
       </ul>
     </nav>
   </header>
-  <main class="px-4 py-8 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">Про нас</h2>
-    <p class="mb-4">Ми - українська громада християн у Німеччині, яка об'єднана любов'ю до Бога та бажанням служити один одному. Церква, в якій Бог змінює життя. Тут кожен може знайти підтримку, надію та любов.</p>
 
-    <h2 class="text-2xl font-semibold mb-4">Що робимо?</h2>
-    <ul class="list-disc list-inside mb-4">
-      <li>Проповідуємо Євангеліє - добру звістку про спасіння через Ісуса Христа.</li>
-      <li>Молимось разом - за родини, Україну, мир, зцілення і потреби людей.</li>
-      <li>Підтримуємо одне одного - духовно, емоційно та практично.</li>
-      <li>Організовуємо зустрічі для молоді, дітей, жінок та чоловіків.</li>
-    </ul>
-
-    <h2 class="text-2xl font-semibold mb-4">Наше бачення</h2>
-    <ul class="list-disc list-inside mb-4">
-      <li>Церква - це не будівля, а люди.</li>
-      <li>Любов - це мова, яку розуміє кожен.</li>
-      <li>Віра - це шлях, на якому ніхто не має йти наодинці.</li>
-    </ul>
-
-    <p class="mt-8">Відкрий серце для чогось більшого. Ми раді тобі незалежно від віку, досвіду чи минулого.</p>
+  <main>
+    <h1>Ласкаво просимо до церкви Ueglage</h1>
+    <p>Наша місія — нести світло Євангелія та любов Ісуса Христа у кожне серце.</p>
+    <p>Приєднуйтеся до наших служінь, малих груп та онлайн трансляцій.</p>
   </main>
-  <footer class="text-center text-sm py-6 bg-white mt-12 shadow-inner">
-    &copy; 2025 U.E.G.Lage | Українська Євангельська Церква м. Лаге
+
+  <footer>
+    <p>&copy; 2025 Церква Ueglage. Всі права захищені.</p>
   </footer>
 </body>
 </html>
