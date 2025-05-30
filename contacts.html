@@ -33,15 +33,15 @@
       @apply mb-5 sm:mb-6;
     }
     .contact-person p.font-semibold {
-       color: #000000;
+      color: #000000;
       @apply text-lg sm:text-xl;
     }
     .contact-person ul li, .contact-section p, .contact-section a:not(.nav-link) {
         color: #4a5568;
     }
-     .contact-section .contact-link {
+      .contact-section .contact-link {
         @apply text-blue-600 hover:text-blue-800 hover:underline;
-     }
+      }
     .contact-person ul {
         @apply space-y-2 sm:space-y-2.5;
     }
@@ -50,6 +50,10 @@
     }
     .social-link-text {
         @apply text-base sm:text-lg ml-2; 
+    }
+    .social-item i { /* Ensure consistent icon sizing and alignment if needed */
+        width: 1.75rem; /* Adjust if icons look misaligned, text-2xl is approx 1.5rem */
+        text-align: center;
     }
   </style>
 </head>
@@ -121,23 +125,31 @@
       <ul class="list-none space-y-3 sm:space-y-4">
         <li class="social-item">
             <i class="fab fa-youtube text-red-600 mr-2 text-2xl"></i>
-            <a href="https://www.youtube.com/@ueglage" target="_blank" class="contact-link social-link-text">YouTube</a>
+            <a href="https://www.youtube.com/@ueglage" target="_blank" class="contact-link social-link-text">YouTube - канал нашої церкви</a>
         </li>
         <li class="social-item">
             <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
-            <a href="https://www.instagram.com/u.e.g.lage" target="_blank" class="contact-link social-link-text">Instagram</a>
+            <a href="https://www.instagram.com/u.e.g.lage" target="_blank" class="contact-link social-link-text">Instagram - сторінка нашої церкви</a>
         </li>
-         <li class="social-item">
+        <li class="social-item">
+            <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
+            <a href="https://www.instagram.com/jugend_lage_ua/" target="_blank" class="contact-link social-link-text">Instagram - сторінка нашої молоді (@jugend_lage_ua)</a>
+        </li>
+        <li class="social-item">
+            <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
+            <a href="https://www.instagram.com/next.gen_lage/" target="_blank" class="contact-link social-link-text">Instagram - сторінка наших підлітків (@next.gen_lage)</a>
+        </li>
+        <li class="social-item">
             <i class="fab fa-facebook text-blue-600 mr-2 text-2xl"></i>
-            <a href="https://www.facebook.com/groups/199733423150258" target="_blank" class="contact-link social-link-text">Facebook група</a>
+            <a href="https://www.facebook.com/groups/199733423150258" target="_blank" class="contact-link social-link-text">Facebook спільнота "U.E.G.Lage"</a>
         </li>
         <li class="social-item">
             <i class="fab fa-telegram-plane text-blue-500 mr-2 text-2xl"></i>
-            <a href="https://t.me/ueglage_bot" target="_blank" class="contact-link social-link-text">Telegram Bot: @ueglage_bot</a>
+            <a href="https://t.me/ueglage_bot" target="_blank" class="contact-link social-link-text">Telegram Bot: @ueglage_bot (для надсилання файлів в медійну групу)</a>
         </li>
         <li class="social-item">
             <i class="fab fa-viber text-purple-600 mr-2 text-2xl"></i>
-            <a href="https://invite.viber.com/?g2=AQAYTXdpUlzyTk87MiRKZcwFudBLHfIFoRMx0xqEhv2PKmhNuZvNOkDeiVYC87k%2F" target="_blank" class="contact-link social-link-text">Viber Група</a>
+            <a href="https://invite.viber.com/?g2=AQAYTXdpUlzyTk87MiRKZcwFudBLHfIFoRMx0xqEhv2PKmhNuZvNOkDeiVYC87k%2F" target="_blank" class="contact-link social-link-text">Viber Група "Українці в Лаге"</a>
         </li>
       </ul>
     </div>
