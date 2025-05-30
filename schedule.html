@@ -13,7 +13,7 @@
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-       color: #4a5568; /* text-gray-700 */
+      color: #4a5568; /* text-gray-700 */
     }
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
@@ -23,12 +23,21 @@
       @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-blue-600 hover:text-yellow-50 transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
     }
     .schedule-item p {
-       color: #4a5568; /* text-gray-700 */
+      color: #4a5568; /* text-gray-700 */
     }
-    .schedule-item h3 i {
-        color: #4f46e5; /* indigo-600, for a nice accent */
-        width: 1.5em; /* Ensure icons have similar visual weight/spacing */
-        text-align: center;
+    .schedule-item h3 i.fa-instagram { /* Specific style for Instagram icon */
+        color: #E1306C; /* Instagram pink/purple */
+    }
+    .schedule-item h3 i:not(.fa-instagram) { /* Style for other icons */
+      color: #4f46e5; /* indigo-600, for a nice accent */
+      width: 1.5em; /* Ensure icons have similar visual weight/spacing */
+      text-align: center;
+    }
+    .schedule-item h3 a i.fa-instagram { /* Ensure icon in link keeps color */
+        color: #E1306C;
+    }
+     .schedule-item h3 a:hover i.fa-instagram {
+        color: #c13584; /* Darker Instagram color on hover */
     }
   </style>
 </head>
@@ -53,6 +62,7 @@
   <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto">
     <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">Розклад зібрань та заходів</h2>
     <div class="space-y-5 text-base sm:text-lg schedule-item">
+      
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
         <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
           <i class="fas fa-calendar-check mr-3"></i>
@@ -60,20 +70,37 @@
         </h3>
         <p class="pl-8">Щонеділі о 12:30</p>
       </div>
+
+      <div class="p-4 bg-white/70 rounded-lg shadow-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-children mr-3"></i>
+          Недільна школа для дітей від 3-х до 11 років:
+        </h3>
+        <p class="pl-8">Щонеділі о 13:00</p>
+      </div>
+
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
         <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
           <i class="fas fa-users mr-3"></i>
-          Молодіжні спілкування:
+          Молодіжні спілкування для молоді 16+:
+          <a href="https://www.instagram.com/jugend_lage_ua/" target="_blank" rel="noopener noreferrer" class="ml-2 transition-opacity duration-200 hover:opacity-75">
+            <i class="fab fa-instagram"></i>
+          </a>
         </h3>
         <p class="pl-8">Щонеділі о 17:00</p>
       </div>
+
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
         <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
           <i class="fas fa-rocket mr-3"></i>
-          Підліткові TEENY LAGE:
+          Підліткові NextGen (для підлітків віком від 11 до 15 років):
+          <a href="https://www.instagram.com/next.gen_lage/" target="_blank" rel="noopener noreferrer" class="ml-2 transition-opacity duration-200 hover:opacity-75">
+            <i class="fab fa-instagram"></i>
+          </a>
         </h3>
         <p class="pl-8">Субота о 16:00</p>
       </div>
+
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
         <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
           <i class="fas fa-book-bible mr-3"></i>
@@ -81,6 +108,7 @@
         </h3>
         <p class="pl-8">Щочетверга о 19:00</p>
       </div>
+
       <div class="p-4 bg-white/70 rounded-lg shadow-md">
         <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
           <i class="fas fa-volleyball mr-3"></i>
@@ -88,6 +116,55 @@
         </h3>
         <p class="pl-8">Щосереди о 18:00</p>
       </div>
+
+      <div class="p-4 bg-white/70 rounded-lg shadow-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-mug-hot mr-3"></i>
+          Молитовні сніданки для членів церкви
+        </h3>
+        <p class="pl-8">Час та дата повідомляються додатково.</p>
+      </div>
+
+      <div class="p-4 bg-white/70 rounded-lg shadow-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-person-dress mr-3"></i>
+          Жіночі зустрічі (конференції, семінари)
+        </h3>
+        <p class="pl-8">Час та дата повідомляються додатково.</p>
+      </div>
+
+      <div class="p-4 bg-white/70 rounded-lg shadow-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-person mr-3"></i>
+          Чоловічі зустрічі (конференції, семінари)
+        </h3>
+        <p class="pl-8">Час та дата повідомляються додатково.</p>
+      </div>
+
+      <div class="p-4 bg-white/70 rounded-lg shadow-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-tree mr-3"></i>
+          Загальноцерковний виїзд на природу
+        </h3>
+        <p class="pl-8">Час та дата повідомляються додатково.</p>
+      </div>
+
+      <div class="p-4 bg-white/70 rounded-lg shadow-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-campground mr-3"></i>
+          Літній молодіжний табір
+        </h3>
+        <p class="pl-8">Час та дата повідомляються додатково.</p>
+      </div>
+
+      <div class="p-4 bg-white/70 rounded-lg shadow-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
+          <i class="fas fa-child-reaching mr-3"></i>
+          Літній дитячий табір
+        </h3>
+        <p class="pl-8">Час та дата повідомляються додатково.</p>
+      </div>
+
     </div>
   </main>
   <footer class="text-center text-sm py-6 sm:py-8 bg-white mt-12 sm:mt-16 shadow-inner">
