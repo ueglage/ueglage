@@ -11,121 +11,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #2d3748;
-    }
-    h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-      color: #1a365d;
-    }
-    /* ФІКС: Меню тепер яскраво-біле і дуже помітне */
-    .nav-link {
-      @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300 ease-in-out hover:bg-[#F6931E] hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-400;
-      color: #ffffff !important; /* Примусово білий колір */
-    }
-    .active-link {
-      @apply bg-[#F6931E] text-white shadow-lg;
-    }
-    .main-content p {
-      @apply text-base sm:text-lg leading-relaxed mb-4 text-gray-700;
-    }
-    .contact-section { 
-      @apply bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-[#F6931E];
-    }
-    .final-invitation {
-      @apply mt-10 text-center font-bold text-[#F6931E] text-2xl;
-    }
-    header {
-      background-color: #1a365d; 
-    }
+    body { font-family: 'Open Sans', sans-serif; color: #2d3748; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
+    .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
+    .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
+    .contact-section { @apply bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-[#F6931E] mb-12 sm:mb-16; }
+    header { background-color: #1a365d; }
+    .main-content ul { @apply list-disc list-inside space-y-4 mb-6; }
+    .main-content ul li { @apply text-base sm:text-lg leading-relaxed; }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN1X89P8LS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-BN1X89P8LS');
-  </script>
 </head>
 <body class="bg-gray-50 min-h-screen">
   <header class="text-center pt-10 pb-10 shadow-2xl">
     <div class="max-w-6xl mx-auto px-4">
       <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
-      
-      <div class="space-y-2 mb-10">
-        <p class="text-white opacity-80 text-sm sm:text-base uppercase tracking-widest font-light">Ukrainische Evangelische Gemeinde Lage</p>
+      <div class="space-y-2 mb-10 text-white">
+        <p class="opacity-80 text-sm sm:text-base uppercase tracking-widest">Ukrainische Evangelische Gemeinde Lage</p>
         <p class="text-[#F6931E] text-xl sm:text-3xl font-bold">Українська Євангельська Церква м. Лаге</p>
       </div>
-
-      <nav>
-        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
-          <li><a href="index.html" class="nav-link active-link">Головна</a></li>
-          <li><a href="about.html" class="nav-link">Про церкву</a></li>
-          <li><a href="schedule.html" class="nav-link">Розклад</a></li>
-          <li><a href="groups.html" class="nav-link">Групи</a></li>
-          <li><a href="gallery.html" class="nav-link">Медіа</a></li>
-          <li><a href="contacts.html" class="nav-link">Контакти</a></li>
-          <li><a href="donate.html" class="nav-link">Пожертви</a></li>
-        </ul>
-      </nav>
+      <nav><ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+        <li><a href="index.html" class="nav-link active-link">Головна</a></li>
+        <li><a href="about.html" class="nav-link">Про церкву</a></li>
+        <li><a href="schedule.html" class="nav-link">Розклад</a></li>
+        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
+        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
+        <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
+      </ul></nav>
     </div>
   </header>
-
   <main class="px-4 py-16 max-w-4xl mx-auto main-content">
-    <h1 class="text-4xl sm:text-5xl font-extrabold mb-12 text-center text-[#1a365d]">Ласкаво просимо до нашої Церкви!</h1>
-
-    <div class="grid gap-10">
-      <div class="contact-section">
-        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#1a365d]">
-          <i class="fas fa-home text-[#F6931E] mr-4 text-3xl"></i>Про нас: Дім далеко від дому
-        </h2>
-        <p>Ми – жива та дружня українська християнська громада, що знайшла свій духовний дім тут, у Німеччині. Нас об'єднує глибока любов до Бога, щире бажання служити ближньому та спільна українська душа.</p>
-      </div>
-
-      <div class="contact-section">
-        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#1a365d]">
-          <i class="fas fa-heart text-[#F6931E] mr-4 text-3xl"></i>Чим ми живемо та що робимо?
-        </h2>
-        <ul class="list-none space-y-5">
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
-            <span><strong>Ділимося Благою Звісткою:</strong> Ми з радістю проповідуємо Євангеліє – вічно актуальну звістку про спасіння через віру в Ісуса Христа.</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
-            <span><strong>Єднаємось у молитві:</strong> Спільна молитва – це серце нашої громади за наші родини та мир в Україні.</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
-            <span><strong>Підтримуємо один одного:</strong> Надаємо духовну, емоційну та практичну допомогу кожному, хто її потребує.</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="contact-section">
-        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#1a365d]">
-          <i class="fas fa-bible text-[#F6931E] mr-4 text-3xl"></i>Наше бачення
-        </h2>
-        <p>Ми переконані, що Церква – це не стіни, а люди. Любов – це універсальна мова, а віра – живий зв'язок з Христом, що ґрунтується на Біблії.</p>
-      </div>
+    <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-center">Ласкаво просимо до нашої Церкви!</h1>
+    <div class="contact-section">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4">Про нас: Дім далеко від дому</h2>
+      <p class="text-base sm:text-lg leading-relaxed">Ми – жива та дружня українська християнська громада, що знайшла свій духовний дім тут, у Німеччині. Нас об'єднує глибока любов до Бога, щире бажання служити ближньому та спільна українська душа. Наша церква – це не просто місце зустрічей; це простір, де Бог торкається сердець та змінює життя на краще. Ми віримо, що саме тут, у колі однодумців, кожен може віднайти справжню підтримку, непохитну надію та безмежну любов, якої так прагне душа.</p>
     </div>
-
-    <div class="text-center mt-16 px-6">
-      <p class="text-xl italic text-gray-600">Незалежно від вашого віку чи минулого – наші двері та серця завжди відкриті для вас.</p>
-      <p class="final-invitation">Чекаємо на зустріч з вами!</p>
+    <div class="contact-section">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Чим ми живемо та що робимо?</h2>
+      <p class="text-base sm:text-lg mb-4">Наша діяльність наповнена вірою, спілкуванням та служінням:</p>
+      <ul>
+        <li><strong>Ділимося Благою Звісткою:</strong> Ми з радістю проповідуємо Євангеліє – вічно актуальну звістку про спасіння, надію та нове життя через віру в Ісуса Христа.</li>
+        <li><strong>Єднаємось у молитві:</strong> Спільна молитва – це серце нашої громади. Ми молимось за наші родини, за мир та благословення для України, за зцілення хворих, за потреби кожного члена нашої церковної сім'ї та за весь світ.</li>
+        <li><strong>Підтримуємо один одного на кожному кроці:</strong> Ми прагнемо бути поруч у радості та в скруті, надаючи духовну, емоційну та практичну допомогу. У нас ви знайдете відкриті серця та готовність вислухати.</li>
+        <li><strong>Створюємо простір для кожного:</strong> Ми організовуємо різноманітні зустрічі та заходи, що відповідають інтересам та потребам різних груп: натхненні молодіжні зібрання, цікаві заняття для дітей, теплі сестринські спілкування для жінок та змістовні зустрічі для чоловіків.</li>
+      </ul>
     </div>
+    <div class="contact-section">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Наше бачення: Церква – це ми</h2>
+      <p class="text-base sm:text-lg mb-4">Ми глибоко переконані, що:</p>
+      <ul>
+        <li><strong>Церква – це не стіни, а люди,</strong> об'єднані спільною вірою та любов'ю. Кожен із нас – важлива частина великої Божої родини.</li>
+        <li><strong>Любов – це універсальна мова,</strong> яку розуміє кожне серце, незалежно від походження чи життєвих обставин. Саме любов є основою наших стосунків.</li>
+        <li><strong>Віра для нас – це живий та особистий зв'язок з Ісусом Христом, що ґрунтується на непохитній довірі до Святого Письма – Біблії, як до Божого Слова.</strong> Разом ми зростаємо у пізнанні Бога, навчаючись жити згідно з Його заповідями, підтримуємо один одного в слідуванні за Христом.</li>
+      </ul>
+    </div>
+    <div class="text-center mt-12"><p class="text-xl italic text-gray-600">Відкрийте своє серце для більшого! Чекаємо на зустріч з вами!</p></div>
   </main>
-
-  <footer class="text-center py-12 bg-[#1a365d] text-white mt-20">
-    <div class="max-w-5xl mx-auto px-4">
-      <p class="font-bold text-lg">© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
-      <p class="mt-2 text-white/60">Feldstraße 53, 32791 Lage</p>
-    </div>
+  <footer class="text-center py-10 bg-[#1a365d] text-white mt-16 shadow-inner">
+    <p>© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
