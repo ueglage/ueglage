@@ -19,10 +19,10 @@
       font-family: 'Poppins', sans-serif;
       color: #1a365d;
     }
-    /* Максимально помітне меню */
+    /* ФІКС: Меню тепер яскраво-біле і дуже помітне */
     .nav-link {
       @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300 ease-in-out hover:bg-[#F6931E] hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-400;
-      text-shadow: 0px 1px 2px rgba(0,0,0,0.5); /* Додатковий контраст для тексту */
+      color: #ffffff !important; /* Примусово білий колір */
     }
     .active-link {
       @apply bg-[#F6931E] text-white shadow-lg;
@@ -37,7 +37,7 @@
       @apply mt-10 text-center font-bold text-[#F6931E] text-2xl;
     }
     header {
-      background-color: #1a365d; /* Глибокий синій для контрасту з білим логотипом */
+      background-color: #1a365d; 
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN1X89P8LS"></script>
