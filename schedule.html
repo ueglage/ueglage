@@ -3,184 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Розклад богослужінь | U.E.G.Lage</title>
+  <title>Розклад | U.E.G.Lage</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="a.png">
+  <link rel="icon" type="image/png" href="a2.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #4a5568; /* text-gray-700 */
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Poppins', sans-serif;
-      color: #000000; /* text-black */
-    }
-    .nav-link {
-      @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-blue-600 hover:text-yellow-50 transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
-    }
-    .schedule-item p {
-      color: #4a5568; /* text-gray-700 */
-    }
-    .schedule-item h3 i.fa-instagram { /* Specific style for Instagram icon */
-        color: #E1306C; /* Instagram pink/purple */
-    }
-    .schedule-item h3 i:not(.fa-instagram) { /* Style for other icons */
-      color: #4f46e5; /* indigo-600, for a nice accent */
-      width: 1.5em; /* Ensure icons have similar visual weight/spacing */
-      text-align: center;
-    }
-    .schedule-item h3 a i.fa-instagram { /* Ensure icon in link keeps color */
-        color: #E1306C;
-    }
-     .schedule-item h3 a:hover i.fa-instagram {
-        color: #c13584; /* Darker Instagram color on hover */
-    }
+    body { font-family: 'Open Sans', sans-serif; color: #2d3748; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
+    .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
+    .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
+    .schedule-card { @apply bg-white p-5 rounded-xl shadow-md border-l-4 border-[#F6931E] mb-4 flex items-center; }
+    header { background-color: #1a365d; }
   </style>
-  <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/55d845c879a94fcdb9be1ee87df25861.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN1X89P8LS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-BN1X89P8LS');
-  </script>
 </head>
-<body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen">
-  <header class="text-center py-6 bg-white shadow-lg">
-    <img src="a.png" alt="Логотип церкви" class="mx-auto w-28 h-28 sm:w-32 sm:h-32">
-    <h1 class="text-3xl sm:text-4xl font-bold mt-3 sm:mt-4">U.E.G.Lage</h1>
-    <p class="text-lg sm:text-xl text-gray-700">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-lg sm:text-xl text-gray-700">Українська Євангельська Церква м. Лаге</p>
-    <nav class="mt-5 sm:mt-6">
-      <ul class="flex flex-wrap justify-center gap-3 sm:gap-4">
-        <li><a href="index.html" class="nav-link">Головна</a></li>
-        <li><a href="about.html" class="nav-link">Про церкву</a></li>
-        <li><a href="schedule.html" class="nav-link">Розклад богослужінь</a></li>
-        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
-        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
-        <li><a href="contacts.html" class="nav-link">Контакти</a></li>
-        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
-      </ul>
-    </nav>
+<body class="bg-gray-50 min-h-screen">
+  <header class="text-center pt-10 pb-10 shadow-2xl">
+    <div class="max-w-6xl mx-auto px-4">
+      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
+      <nav>
+        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+          <li><a href="index.html" class="nav-link">Головна</a></li>
+          <li><a href="about.html" class="nav-link">Про церкву</a></li>
+          <li><a href="schedule.html" class="nav-link active-link">Розклад</a></li>
+          <li><a href="groups.html" class="nav-link">Групи</a></li>
+          <li><a href="gallery.html" class="nav-link">Медіа</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+          <li><a href="donate.html" class="nav-link">Пожертви</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto">
-    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">Розклад зібрань та заходів</h2>
-    <div class="space-y-5 text-base sm:text-lg schedule-item">
-      
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-calendar-check mr-3"></i>
-          Зібрання:
-        </h3>
-        <p class="pl-8">Щонеділі о 12:30</p>
-      </div>
 
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-children mr-3"></i>
-          Недільна школа для дітей від 3-х до 11 років:
-        </h3>
-        <p class="pl-8">Щонеділі о 13:00</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-users mr-3"></i>
-          Молодіжні спілкування для молоді 16+:
-          <a href="https://www.instagram.com/jugend_lage_ua/" target="_blank" rel="noopener noreferrer" class="ml-2 transition-opacity duration-200 hover:opacity-75">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </h3>
-        <p class="pl-8">Щонеділі о 17:00</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-rocket mr-3"></i>
-          Підліткові NextGen (для підлітків віком від 11 до 15 років):
-          <a href="https://www.instagram.com/next.gen_lage/" target="_blank" rel="noopener noreferrer" class="ml-2 transition-opacity duration-200 hover:opacity-75">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </h3>
-        <p class="pl-8">Щосуботи о 15:00</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-book-bible mr-3"></i>
-          Розбір Слова Божого:
-        </h3>
-        <p class="pl-8">Щочетверга о 19:00</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-volleyball mr-3"></i>
-          Волейбол (Спортивне служіння для молоді):
-        </h3>
-        <p class="pl-8">Щосереди о 18:00</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-mug-hot mr-3"></i>
-          Молитовні сніданки для членів церкви
-        </h3>
-        <p class="pl-8">Час та дата повідомляються додатково.</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-person-dress mr-3"></i>
-          Жіночі зустрічі (конференції, семінари)
-        </h3>
-        <p class="pl-8">Час та дата повідомляються додатково.</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-person mr-3"></i>
-          Чоловічі зустрічі (конференції, семінари)
-        </h3>
-        <p class="pl-8">Час та дата повідомляються додатково.</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-tree mr-3"></i>
-          Загальноцерковний виїзд на природу
-        </h3>
-        <p class="pl-8">Час та дата повідомляються додатково.</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-campground mr-3"></i>
-          Літній молодіжний табір
-        </h3>
-        <p class="pl-8">Час та дата повідомляються додатково.</p>
-      </div>
-
-      <div class="p-4 bg-white/70 rounded-lg shadow-md">
-        <h3 class="font-semibold text-lg sm:text-xl mb-1 flex items-center">
-          <i class="fas fa-child-reaching mr-3"></i>
-          Літній дитячий табір
-        </h3>
-        <p class="pl-8">Час та дата повідомляються додатково.</p>
-      </div>
-
+  <main class="px-4 py-16 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-extrabold mb-10 text-center">Розклад богослужінь</h1>
+    <div class="space-y-4">
+      <div class="schedule-card"><i class="fas fa-church text-[#F6931E] mr-4 text-2xl"></i> <div><p class="font-bold">Недільне зібрання</p><p>Щонеділі о 12:30</p></div></div>
+      <div class="schedule-card"><i class="fas fa-child text-[#F6931E] mr-4 text-2xl"></i> <div><p class="font-bold">Недільна школа</p><p>Щонеділі о 13:00</p></div></div>
+      <div class="schedule-card"><i class="fas fa-users text-[#F6931E] mr-4 text-2xl"></i> <div><p class="font-bold">Молодіжне зібрання</p><p>Щонеділі о 17:00</p></div></div>
+      <div class="schedule-card"><i class="fas fa-book-open text-[#F6931E] mr-4 text-2xl"></i> <div><p class="font-bold">Розбір Слова Божого</p><p>Щочетверга о 19:00</p></div></div>
     </div>
   </main>
-  <footer class="text-center text-sm py-6 sm:py-8 bg-white mt-12 sm:mt-16 shadow-inner">
-    <p class="text-gray-600">&copy; <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
+
+  <footer class="text-center py-12 bg-[#1a365d] text-white mt-20">
+    <p>© <span id="year"></span> U.E.G.Lage</p>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
