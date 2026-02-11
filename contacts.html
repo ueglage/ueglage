@@ -6,54 +6,45 @@
   <title>Контакти | U.E.G.Lage</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="a2.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body { font-family: 'Open Sans', sans-serif; color: #2d3748; }
     h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
     .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
     .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
-    .contact-card { @apply bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#F6931E]; }
+    .contact-card { @apply bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#F6931E] mb-8; }
     header { background-color: #1a365d; }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
   <header class="text-center pt-10 pb-10 shadow-2xl">
-    <div class="max-w-6xl mx-auto px-4">
-      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
-      <nav>
-        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
-          <li><a href="index.html" class="nav-link">Головна</a></li>
-          <li><a href="about.html" class="nav-link">Про церкву</a></li>
-          <li><a href="schedule.html" class="nav-link">Розклад</a></li>
-          <li><a href="groups.html" class="nav-link">Групи</a></li>
-          <li><a href="gallery.html" class="nav-link">Медіа</a></li>
-          <li><a href="contacts.html" class="nav-link active-link">Контакти</a></li>
-          <li><a href="donate.html" class="nav-link">Пожертви</a></li>
-        </ul>
-      </nav>
+    <div class="max-w-6xl mx-auto px-4"><img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
+      <nav><ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+        <li><a href="index.html" class="nav-link">Головна</a></li>
+        <li><a href="about.html" class="nav-link">Про церкву</a></li>
+        <li><a href="schedule.html" class="nav-link">Розклад</a></li>
+        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
+        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
+        <li><a href="contacts.html" class="nav-link active-link">Контакти</a></li>
+        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
+      </ul></nav>
     </div>
   </header>
-
   <main class="px-4 py-16 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-extrabold mb-10 text-center">Контакти</h1>
+    <h1 class="text-3xl font-bold mb-10 text-center">Контакти</h1>
     <div class="contact-card">
-      <h3 class="text-xl font-bold mb-4">Наша адреса:</h3>
-      <p class="text-lg flex items-center mb-6">
-        <i class="fas fa-map-marker-alt text-red-500 mr-3 text-2xl"></i>
-        Feldstraße 53, 32791 Lage
-      </p>
-      <div class="rounded-xl overflow-hidden shadow-inner border">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.204543163777!2d8.7905!3d51.9958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3f8c8b!2zRmVsZHN0cmHDn2UgNTMsIDMyNzkxIExhZ2UsIEdlcm1hbnk!5e0!3m2!1sen!2sde!4v1" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
+      <h3 class="text-xl font-bold mb-4">Телефони:</h3>
+      <p class="mb-4"><strong>Віктор:</strong> +49 151 2050 3835 (WhatsApp) / +380 96 811 3453 (Viber)</p>
+      <p class="mb-4"><strong>Михайло:</strong> +380 97 940 0603 (Viber)</p>
+      <p class="mb-4"><strong>Валерій:</strong> +49 170 4154 006 (Telegram) / +380 93 571 4550 (WhatsApp/Viber)</p>
+      <p class="mb-4"><strong>Петро:</strong> +49 151 7281 2211 (WhatsApp) / +380 50 493 9608 (Viber)</p>
+    </div>
+    <div class="contact-card">
+      <h3 class="text-xl font-bold mb-4">Адреса та пошта:</h3>
+      <p class="mb-2"><i class="fas fa-envelope mr-2"></i> u.e.g.lage@gmail.com</p>
+      <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-red-500"></i> Feldstraße 53, 32791 Lage</p>
     </div>
   </main>
-
-  <footer class="text-center py-12 bg-[#1a365d] text-white mt-20">
-    <p>© <span id="year"></span> U.E.G.Lage</p>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="text-center py-10 bg-[#1a365d] text-white mt-16 shadow-inner"><p>© <span id="year"></span> U.E.G.Lage</p></footer>
 </body>
 </html>
