@@ -1,119 +1,55 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Фото / відео галерея | U.E.G.Lage</title>
+  <title>Медіа | U.E.G.Lage</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="a.png">
+  <link rel="icon" type="image/png" href="a2.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #4a5568; /* text-gray-700 */
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Poppins', sans-serif;
-      color: #000000; /* text-black */
-    }
-    .nav-link {
-      @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-blue-600 hover:text-yellow-50 transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
-    }
-    .youtube-link-card {
-      @apply bg-white/70 p-5 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 block; /* Made card a block to be a link */
-    }
-    .youtube-link-card h3 { /* Ensure h3 inside card is also black if not inheriting */
-        color: #000000;
-    }
-    .youtube-link-card p {
-        color: #4a5568; /* text-gray-700 */
-    }
-    .youtube-button-like { /* Style for the link to look like a button or a distinct area */
-      @apply mt-4 inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out;
-    }
-     .main-content p, .main-content .text-xs {
-      color: #4a5568; /* text-gray-700 for general text */
-    }
-    .main-content .text-xs {
-      color: #718096; /* text-gray-600 for hints */
-    }
+    body { font-family: 'Open Sans', sans-serif; color: #2d3748; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
+    .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
+    .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
+    .youtube-card { @apply bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600 text-center; }
+    header { background-color: #1a365d; }
   </style>
-  <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/55d845c879a94fcdb9be1ee87df25861.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN1X89P8LS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-BN1X89P8LS');
-  </script>
 </head>
-<body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen">
-  <header class="text-center py-6 bg-white shadow-lg">
-    <img src="a.png" alt="Логотип церкви" class="mx-auto w-28 h-28 sm:w-32 sm:h-32">
-    <h1 class="text-3xl sm:text-4xl font-bold mt-3 sm:mt-4">U.E.G.Lage</h1>
-    <p class="text-lg sm:text-xl text-gray-700">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-lg sm:text-xl text-gray-700">Українська Євангельська Церква м. Лаге</p>
-    <nav class="mt-5 sm:mt-6">
-      <ul class="flex flex-wrap justify-center gap-3 sm:gap-4">
-        <li><a href="index.html" class="nav-link">Головна</a></li>
-        <li><a href="about.html" class="nav-link">Про церкву</a></li>
-        <li><a href="schedule.html" class="nav-link">Розклад богослужінь</a></li>
-        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
-        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
-        <li><a href="contacts.html" class="nav-link">Контакти</a></li>
-        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto main-content">
-    <h2 class="text-2xl sm:text-3xl font-semibold mb-5 text-center">Фото / відео галерея</h2>
-    <p class="mb-8 sm:mb-10 text-base sm:text-lg text-center leading-relaxed">Ознайомтеся з нашими відеоматеріалами на YouTube каналі. <br> Натисніть на картки нижче, щоб перейти до відповідних розділів.</p>
-
-    <div class="space-y-6 sm:space-y-8">
-      <a href="https://www.youtube.com/playlist?list=PLGzWzMli-R_ZA7u6f8T54kOfLYVHPZ-nl" target="_blank" class="youtube-link-card">
-        <div class="flex items-center mb-2 sm:mb-3">
-            <img src="a.png" alt="Іконка YouTube розділу" class="w-16 h-16 mr-4 rounded-md object-cover"> <h3 class="text-lg sm:text-xl font-semibold">Трансляції Служінь (Записи Служінь)</h3>
-        </div>
-        <p class="mb-3 text-sm sm:text-base">Перегляньте записи наших минулих богослужінь та особливих заходів.</p>
-        <span class="youtube-button-like">
-          <i class="fab fa-youtube mr-2"></i> Дивитися записи служінь
-        </span>
-        <p class="mt-2 text-xs">Підказка: це посилання веде на загальний список відео. Якщо у вас є окремий плейлист для служінь, оновіть URL.</p>
-      </a>
-
-      <a href="https://www.youtube.com/playlist?list=PLGzWzMli-R_Zetoo4it7MGsJh3jx3edMJ" target="_blank" class="youtube-link-card">
-        <div class="flex items-center mb-2 sm:mb-3">
-            <img src="a.png" alt="Іконка YouTube розділу" class="w-16 h-16 mr-4 rounded-md object-cover"> <h3 class="text-lg sm:text-xl font-semibold">Музичні Відео</h3>
-        </div>
-        <p class="mb-3 text-sm sm:text-base">Насолоджуйтесь музичними виступами та піснями хвали від нашої громади.</p>
-        <span class="youtube-button-like">
-          <i class="fab fa-youtube mr-2"></i> Дивитися музичні відео
-        </span>
-         <p class="mt-2 text-xs">Підказка: це посилання веде на список плейлистів каналу. Якщо у вас є окремий плейлист для музики, оновіть URL на пряме посилання на нього.</p>
-      </a>
-
-      <a href="https://www.youtube.com/@ueglage/videos?view=0&sort=dd&flow=grid" target="_blank" class="youtube-link-card">
-        <div class="flex items-center mb-2 sm:mb-3">
-            <img src="a.png" alt="Іконка YouTube розділу" class="w-16 h-16 mr-4 rounded-md object-cover"> <h3 class="text-lg sm:text-xl font-semibold">Останні / Нові Відео</h3>
-        </div>
-        <p class="mb-3 text-sm sm:text-base">Будьте в курсі наших найновіших відео публікацій.</p>
-        <span class="youtube-button-like">
-          <i class="fab fa-youtube mr-2"></i> Дивитися нові відео
-        </span>
-        <p class="mt-2 text-xs">Підказка: це посилання показує всі відео, відсортовані за датою додавання.</p>
-      </a>
+<body class="bg-gray-50 min-h-screen">
+  <header class="text-center pt-10 pb-10 shadow-2xl">
+    <div class="max-w-6xl mx-auto px-4">
+      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
+      <nav>
+        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+          <li><a href="index.html" class="nav-link">Головна</a></li>
+          <li><a href="about.html" class="nav-link">Про церкву</a></li>
+          <li><a href="schedule.html" class="nav-link">Розклад</a></li>
+          <li><a href="groups.html" class="nav-link">Групи</a></li>
+          <li><a href="gallery.html" class="nav-link active-link">Медіа</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+          <li><a href="donate.html" class="nav-link">Пожертви</a></li>
+        </ul>
+      </nav>
     </div>
-     <p class="mt-10 sm:mt-12 text-center text-base sm:text-lg">Для перегляду повного контенту, будь ласка, відвідайте наш <a href="https://www.youtube.com/@ueglage" target="_blank" class="text-red-600 hover:text-red-800 font-semibold underline">головний YouTube канал</a>.</p>
+  </header>
+
+  <main class="px-4 py-16 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-extrabold mb-10 text-center">Фото та Відео</h1>
+    <div class="youtube-card">
+      <i class="fab fa-youtube text-red-600 text-6xl mb-4"></i>
+      <h2 class="text-2xl font-bold mb-4">Наш YouTube Канал</h2>
+      <p class="mb-6">Дивіться записи та прямі трансляції наших богослужінь.</p>
+      <a href="https://www.youtube.com/@ueglage" target="_blank" class="inline-block bg-red-600 text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition">Перейти до перегляду</a>
+    </div>
   </main>
-  <footer class="text-center text-sm py-6 sm:py-8 bg-white mt-12 sm:mt-16 shadow-inner">
-    <p class="text-gray-600">© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
+
+  <footer class="text-center py-12 bg-[#1a365d] text-white mt-20">
+    <p>© <span id="year"></span> U.E.G.Lage</p>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
