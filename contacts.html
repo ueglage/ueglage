@@ -5,179 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакти | U.E.G.Lage</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="icon" type="image/png" href="a.png">
+  <link rel="icon" type="image/png" href="a2.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #4a5568; /* text-gray-700 */
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Poppins', sans-serif;
-      color: #000000; /* text-black */
-    }
-    .nav-link {
-      @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-blue-600 hover:text-yellow-50 transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
-    }
-    .contact-link {
-      @apply text-blue-600 hover:text-blue-800 hover:underline;
-    }
-    .contact-section {
-      /* Base styles for contact section; margin-bottom is now applied directly in HTML */
-      @apply bg-white/70 pt-8 pb-5 sm:pt-10 sm:pb-6 rounded-lg shadow-md;
-    }
-    .contact-person {
-      @apply mb-5 sm:mb-6;
-    }
-    .contact-person p.font-semibold {
-      color: #000000;
-      @apply text-lg sm:text-xl;
-    }
-    .contact-person ul li, .contact-section p, .contact-section a:not(.nav-link) {
-        color: #4a5568;
-    }
-      .contact-section .contact-link {
-        @apply text-blue-600 hover:text-blue-800 hover:underline;
-      }
-    .contact-person ul {
-        @apply space-y-2 sm:space-y-2.5;
-    }
-    .social-item { 
-        @apply flex items-center mb-3 sm:mb-4;
-    }
-    .social-link-text {
-        @apply text-base sm:text-lg ml-2; 
-    }
-    .social-item i { /* Ensure consistent icon sizing and alignment if needed */
-        width: 1.75rem; /* Adjust if icons look misaligned, text-2xl is approx 1.5rem */
-        text-align: center;
-    }
+    body { font-family: 'Open Sans', sans-serif; color: #2d3748; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
+    .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
+    .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
+    .contact-card { @apply bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#F6931E]; }
+    header { background-color: #1a365d; }
   </style>
-  <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/55d845c879a94fcdb9be1ee87df25861.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN1X89P8LS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-BN1X89P8LS');
-  </script>
 </head>
-<body class="bg-gradient-to-b from-blue-300 to-yellow-100 min-h-screen">
-  <header class="text-center py-6 bg-white shadow-lg">
-    <img src="a.png" alt="Логотип церкви" class="mx-auto w-28 h-28 sm:w-32 sm:h-32">
-    <h1 class="text-3xl sm:text-4xl font-bold mt-3 sm:mt-4">U.E.G.Lage</h1>
-    <p class="text-lg sm:text-xl text-gray-700">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-lg sm:text-xl text-gray-700">Українська Євангельська Церква м. Лаге</p>
-    <nav class="mt-5 sm:mt-6">
-      <ul class="flex flex-wrap justify-center gap-3 sm:gap-4">
-        <li><a href="index.html" class="nav-link">Головна</a></li>
-        <li><a href="about.html" class="nav-link">Про церкву</a></li>
-        <li><a href="schedule.html" class="nav-link">Розклад богослужінь</a></li>
-        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
-        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
-        <li><a href="contacts.html" class="nav-link">Контакти</a></li>
-        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
-      </ul>
-    </nav>
+<body class="bg-gray-50 min-h-screen">
+  <header class="text-center pt-10 pb-10 shadow-2xl">
+    <div class="max-w-6xl mx-auto px-4">
+      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
+      <nav>
+        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+          <li><a href="index.html" class="nav-link">Головна</a></li>
+          <li><a href="about.html" class="nav-link">Про церкву</a></li>
+          <li><a href="schedule.html" class="nav-link">Розклад</a></li>
+          <li><a href="groups.html" class="nav-link">Групи</a></li>
+          <li><a href="gallery.html" class="nav-link">Медіа</a></li>
+          <li><a href="contacts.html" class="nav-link active-link">Контакти</a></li>
+          <li><a href="donate.html" class="nav-link">Пожертви</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto">
-    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center">Контакти</h2>
 
-    <div class="contact-section mb-12 sm:mb-16">
-      <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">Телефони:</h3>
-      <div class="space-y-6">
-        <div class="contact-person">
-          <p class="font-semibold">Віктор:</p>
-          <ul class="list-none ml-2 sm:ml-4">
-            <li><i class="fab fa-whatsapp text-green-500 mr-2"></i> <a href="https://wa.me/4915120503835" target="_blank" class="contact-link">+49 151 2050 3835 (WhatsApp)</a></li>
-            <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380968113453" class="contact-link">+380 96 811 3453 (Viber)</a></li>
-          </ul>
-        </div>
-        <div class="contact-person">
-          <p class="font-semibold">Михайло:</p>
-          <ul class="list-none ml-2 sm:ml-4">
-            <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380979400603" class="contact-link">+380 97 940 0603 (Viber)</a></li>
-          </ul>
-        </div>
-        <div class="contact-person">
-          <p class="font-semibold">Валерій:</p>
-          <ul class="list-none ml-2 sm:ml-4">
-            <li><i class="fab fa-telegram text-blue-500 mr-2"></i> <a href="https://t.me/+491704154006" target="_blank" class="contact-link">+49 170 4154 006 (Telegram)</a></li>
-            <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380935714550" class="contact-link">+380 93 571 4550 (Viber)</a></li>
-            <li><i class="fab fa-whatsapp text-green-500 mr-2"></i> <a href="https://wa.me/380935714550" target="_blank" class="contact-link">+380 93 571 4550 (WhatsApp)</a></li>
-          </ul>
-        </div>
-        <div class="contact-person">
-          <p class="font-semibold">Петро:</p>
-          <ul class="list-none ml-2 sm:ml-4">
-            <li><i class="fab fa-whatsapp text-green-500 mr-2"></i> <a href="https://wa.me/4915172812211" target="_blank" class="contact-link">+49 151 7281 2211 (WhatsApp)</a></li>
-            <li><i class="fab fa-viber text-purple-600 mr-2"></i> <a href="viber://chat?number=%2B380504939608" class="contact-link">+380 50 493 9608 (Viber)</a></li>
-          </ul>
-        </div>
+  <main class="px-4 py-16 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-extrabold mb-10 text-center">Контакти</h1>
+    <div class="contact-card">
+      <h3 class="text-xl font-bold mb-4">Наша адреса:</h3>
+      <p class="text-lg flex items-center mb-6">
+        <i class="fas fa-map-marker-alt text-red-500 mr-3 text-2xl"></i>
+        Feldstraße 53, 32791 Lage
+      </p>
+      <div class="rounded-xl overflow-hidden shadow-inner border">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2448.204543163777!2d8.7905!3d51.9958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3f8c8b!2zRmVsZHN0cmHDn2UgNTMsIDMyNzkxIExhZ2UsIEdlcm1hbnk!5e0!3m2!1sen!2sde!4v1" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
-
-    <div class="contact-section mb-12 sm:mb-16">
-        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Електронна пошта:</h3>
-        <p class="flex items-center text-base sm:text-lg">
-            <i class="fas fa-envelope text-gray-500 mr-3"></i>
-            <a href="mailto:u.e.g.lage@gmail.com" class="contact-link">u.e.g.lage@gmail.com</a>
-        </p>
-    </div>
-
-    <div class="contact-section mb-12 sm:mb-16">
-      <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5">Ми в соціальних мережах:</h3>
-      <ul class="list-none space-y-3 sm:space-y-4">
-        <li class="social-item">
-            <i class="fab fa-youtube text-red-600 mr-2 text-2xl"></i>
-            <a href="https://www.youtube.com/@ueglage" target="_blank" class="contact-link social-link-text">YouTube - канал нашої церкви</a>
-        </li>
-        <li class="social-item">
-            <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
-            <a href="https://www.instagram.com/u.e.g.lage" target="_blank" class="contact-link social-link-text">Instagram - сторінка нашої церкви (@u.e.g.lage)</a>
-        </li>
-        <li class="social-item">
-            <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
-            <a href="https://www.instagram.com/jugend_lage_ua/" target="_blank" class="contact-link social-link-text">Instagram - сторінка нашої молоді (@jugend_lage_ua)</a>
-        </li>
-        <li class="social-item">
-            <i class="fab fa-instagram text-pink-600 mr-2 text-2xl"></i>
-            <a href="https://www.instagram.com/next.gen_lage/" target="_blank" class="contact-link social-link-text">Instagram - сторінка наших підлітків (@next.gen_lage)</a>
-        </li>
-        <li class="social-item">
-            <i class="fab fa-facebook text-blue-600 mr-2 text-2xl"></i>
-            <a href="https://www.facebook.com/groups/199733423150258" target="_blank" class="contact-link social-link-text">Facebook спільнота "U.E.G.Lage"</a>
-        </li>
-        
-        <li class="social-item">
-            <i class="fab fa-viber text-purple-600 mr-2 text-2xl"></i>
-            <a href="https://invite.viber.com/?g2=AQAYTXdpUlzyTk87MiRKZcwFudBLHfIFoRMx0xqEhv2PKmhNuZvNOkDeiVYC87k%2F" target="_blank" class="contact-link social-link-text">Viber Група "Українці в Лаге"</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="contact-section mb-12 sm:mb-16"> 
-      <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Адреса:</h3>
-      <a href="https://www.google.com/maps/place/%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0+%D0%84%D0%B2%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0+%D0%A6%D0%B5%D1%80%D0%BA%D0%B2%D0%B0+-+U.E.G.Lage/@51.9912309,8.8079598,20.5z/data=!4m6!3m5!1s0x47ba417201ac94c5:0xc5a6eeaa185a47f9!8m2!3d51.9912602!4d8.8076695!16s%2Fg%2F11stj2wxr5?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center text-base sm:text-lg contact-link mb-3">
-        <i class="fas fa-map-marker-alt text-red-500 mr-3"></i> Feldstraße 53, 32791 Lage
-      </a>
-      <p class="ml-8 text-xs sm:text-sm text-gray-600 mb-4">(натисніть на адресу, щоб відкрити на Google Картах)</p>
-      <div>
-        <iframe src="https://maps.google.com/maps?q=Feldstra%C3%9Fe%2053%2C%2032791%20Lage&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-
   </main>
-  <footer class="text-center text-sm py-6 sm:py-8 bg-white mt-10 sm:mt-12 shadow-inner">
-    <p class="text-gray-600">&copy; <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <footer class="text-center py-12 bg-[#1a365d] text-white mt-20">
+    <p>© <span id="year"></span> U.E.G.Lage</p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
