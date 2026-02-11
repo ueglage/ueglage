@@ -19,12 +19,12 @@
       font-family: 'Poppins', sans-serif;
       color: #1a365d;
     }
-    /* Стиль для навігації в темній шапці */
+    /* Покращені білі кнопки меню */
     .nav-link {
-      @apply px-4 py-2 rounded-lg text-white/90 font-semibold transition-all duration-300 ease-in-out hover:bg-[#F6931E] hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-400;
+      @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300 ease-in-out hover:bg-[#F6931E] hover:text-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-400 opacity-90 hover:opacity-100;
     }
     .active-link {
-      @apply bg-[#F6931E] text-white shadow-md;
+      @apply bg-[#F6931E] text-white shadow-lg opacity-100;
     }
     .main-content p {
       @apply text-base sm:text-lg leading-relaxed mb-4 text-gray-700;
@@ -33,7 +33,10 @@
       @apply bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-[#F6931E];
     }
     .final-invitation {
-      @apply mt-10 text-center font-bold text-[#F6931E] text-xl;
+      @apply mt-10 text-center font-bold text-[#F6931E] text-2xl;
+    }
+    header {
+      background: linear-gradient(to bottom, #1a365d, #142a4a);
     }
   </style>
   <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/55d845c879a94fcdb9be1ee87df25861.js"></script>
@@ -46,17 +49,17 @@
   </script>
 </head>
 <body class="bg-gray-50 min-h-screen">
-  <header class="text-center pt-8 pb-6 bg-[#1a365d] shadow-2xl">
-    <div class="max-w-4xl mx-auto px-4">
-      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-28 sm:h-36 w-auto object-contain mb-6">
+  <header class="text-center pt-10 pb-8 shadow-2xl">
+    <div class="max-w-5xl mx-auto px-4">
+      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-40 w-auto object-contain mb-8">
       
-      <div class="space-y-1 mb-6">
-        <p class="text-white/80 text-sm sm:text-base uppercase tracking-widest font-light">Ukrainische Evangelische Gemeinde Lage</p>
-        <p class="text-orange-400 text-lg sm:text-xl font-medium">Українська Євангельська Церква м. Лаге</p>
+      <div class="space-y-2 mb-8">
+        <p class="text-white/70 text-sm sm:text-base uppercase tracking-widest font-light">Ukrainische Evangelische Gemeinde Lage</p>
+        <p class="text-[#F6931E] text-xl sm:text-2xl font-bold">Українська Євангельська Церква м. Лаге</p>
       </div>
 
-      <nav class="mt-8">
-        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+      <nav class="mt-10">
+        <ul class="flex flex-wrap justify-center gap-3 sm:gap-5">
           <li><a href="index.html" class="nav-link active-link">Головна</a></li>
           <li><a href="about.html" class="nav-link">Про церкву</a></li>
           <li><a href="schedule.html" class="nav-link">Розклад</a></li>
@@ -69,55 +72,55 @@
     </div>
   </header>
 
-  <main class="px-4 py-12 max-w-4xl mx-auto main-content">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-10 text-center text-[#1a365d]">Ласкаво просимо до нашої Церкви!</h1>
+  <main class="px-4 py-16 max-w-4xl mx-auto main-content">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-12 text-center text-[#1a365d]">Ласкаво просимо до нашої Церкви!</h1>
 
-    <div class="grid gap-8">
+    <div class="grid gap-10">
       <div class="contact-section">
-        <h2 class="text-2xl font-bold mb-4 flex items-center">
-          <i class="fas fa-home text-[#F6931E] mr-3"></i>Про нас: Дім далеко від дому
+        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#1a365d]">
+          <i class="fas fa-home text-[#F6931E] mr-4 text-3xl"></i>Про нас: Дім далеко від дому
         </h2>
-        <p>Ми – жива та дружня українська християнська громада, що знайшла свій духовний дім тут, у Німеччині. Нас об'єднує глибока любов до Бога, щире бажання служити ближньому та спільна українська душа.</p>
+        [cite_start]<p>Ми – жива та дружня українська християнська громада, що знайшла свій духовний дім тут, у Німеччині[cite: 1]. [cite_start]Нас об'єднує глибока любов до Бога, щире бажання служити ближньому та спільна українська душа[cite: 1].</p>
       </div>
 
       <div class="contact-section">
-        <h2 class="text-2xl font-bold mb-4 flex items-center">
-          <i class="fas fa-heart text-[#F6931E] mr-3"></i>Чим ми живемо та що робимо?
+        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#1a365d]">
+          <i class="fas fa-heart text-[#F6931E] mr-4 text-3xl"></i>Чим ми живемо та що робимо?
         </h2>
-        <ul class="list-none space-y-4">
+        <ul class="list-none space-y-5">
           <li class="flex items-start">
-            <i class="fas fa-check text-green-500 mt-1.5 mr-3"></i>
-            <span><strong>Ділимося Благою Звісткою:</strong> Ми з радістю проповідуємо Євангеліє – вічно актуальну звістку про спасіння через віру в Ісуса Христа.</span>
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
+            [cite_start]<span><strong>Ділимося Благою Звісткою:</strong> Ми з радістю проповідуємо Євангеліє – вічно актуальну звістку про спасіння через віру в Ісуса Христа[cite: 1].</span>
           </li>
           <li class="flex items-start">
-            <i class="fas fa-check text-green-500 mt-1.5 mr-3"></i>
-            <span><strong>Єднаємось у молитві:</strong> Спільна молитва – це серце нашої громади за наші родини та мир в Україні.</span>
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
+            [cite_start]<span><strong>Єднаємось у молитві:</strong> Спільна молитва – це серце нашої громади за наші родини та мир в Україні[cite: 1].</span>
           </li>
           <li class="flex items-start">
-            <i class="fas fa-check text-green-500 mt-1.5 mr-3"></i>
-            <span><strong>Підтримуємо один одного:</strong> Надаємо духовну, емоційну та практичну допомогу кожному, хто її потребує.</span>
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-4 text-xl"></i>
+            [cite_start]<span><strong>Підтримуємо один одного:</strong> Надаємо духовну, емоційну та практичну допомогу кожному, хто її потребує[cite: 1].</span>
           </li>
         </ul>
       </div>
 
       <div class="contact-section">
-        <h2 class="text-2xl font-bold mb-4 flex items-center">
-          <i class="fas fa-eye text-[#F6931E] mr-3"></i>Наше бачення
+        <h2 class="text-2xl font-bold mb-4 flex items-center text-[#1a365d]">
+          <i class="fas fa-bible text-[#F6931E] mr-4 text-3xl"></i>Наше бачення
         </h2>
-        <p>Ми переконані, що Церква – це не стіни, а люди. Любов – це універсальна мова, а віра – живий зв'язок з Христом, що ґрунтується на Біблії.</p>
+        [cite_start]<p>Ми переконані, що Церква – це не стіни, а люди[cite: 1]. [cite_start]Любов – це універсальна мова, а віра – живий зв'язок з Христом, що ґрунтується на Біблії[cite: 1].</p>
       </div>
     </div>
 
-    <div class="text-center mt-12 px-6">
-      <p class="text-lg italic text-gray-600">Незалежно від вашого віку чи минулого – наші двері та серця завжди відкриті для вас.</p>
+    <div class="text-center mt-16 px-6">
+      [cite_start]<p class="text-xl italic text-gray-600">Незалежно від вашого віку чи минулого – наші двері та серця завжди відкриті для вас[cite: 1].</p>
       <p class="final-invitation">Чекаємо на зустріч з вами!</p>
     </div>
   </main>
 
-  <footer class="text-center text-sm py-10 bg-[#1a365d] text-white/70 mt-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <p>© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
-      <p class="mt-2 text-xs opacity-50">Feldstraße 53, 32791 Lage</p>
+  <footer class="text-center text-sm py-12 bg-[#1a365d] text-white mt-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <p class="font-bold">© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
+      <p class="mt-3 text-white/60">Feldstraße 53, 32791 Lage</p>
     </div>
   </footer>
 
