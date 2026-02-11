@@ -8,39 +8,32 @@
   <link rel="icon" type="image/png" href="a2.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-      color: #4a5568;
+      color: #2d3748;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3 {
       font-family: 'Poppins', sans-serif;
-      color: #000000;
+      color: #1a365d;
     }
+    /* Стиль для навігації в темній шапці */
     .nav-link {
-      @apply px-4 py-2 rounded-lg text-blue-700 font-semibold hover:bg-[#F6931E] hover:text-white transition-all duration-300 ease-in-out shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50;
+      @apply px-4 py-2 rounded-lg text-white/90 font-semibold transition-all duration-300 ease-in-out hover:bg-[#F6931E] hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-400;
+    }
+    .active-link {
+      @apply bg-[#F6931E] text-white shadow-md;
     }
     .main-content p {
-      color: #4a5568; 
-      @apply text-base sm:text-lg leading-relaxed mb-4;
-    }
-    .main-content ul li { 
-      color: #4a5568; 
-      @apply text-base sm:text-lg leading-relaxed; 
-    }
-    .main-content ul {
-      @apply list-disc list-inside space-y-4 mb-6; 
-    }
-    .main-content h2 { 
-      @apply mb-4;
+      @apply text-base sm:text-lg leading-relaxed mb-4 text-gray-700;
     }
     .contact-section { 
-      @apply bg-white/70 p-6 sm:p-8 rounded-lg shadow-lg;
+      @apply bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-[#F6931E];
     }
     .final-invitation {
-      @apply mt-10 text-center font-semibold;
+      @apply mt-10 text-center font-bold text-[#F6931E] text-xl;
     }
   </style>
   <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/55d845c879a94fcdb9be1ee87df25861.js"></script>
@@ -52,61 +45,82 @@
     gtag('config', 'G-BN1X89P8LS');
   </script>
 </head>
-<body class="bg-gradient-to-b from-blue-300 via-white to-orange-100 min-h-screen">
-  <header class="text-center py-6 bg-white shadow-lg">
-    <img src="a2.png" alt="Логотип U.E.G.Lage" class="mx-auto h-24 sm:h-32 w-auto object-contain">
-    <h1 class="text-3xl sm:text-4xl font-bold mt-3 sm:mt-4">U.E.G.Lage</h1> 
-    <p class="text-lg sm:text-xl text-gray-700">Ukrainische Evangelische Gemeinde Lage</p>
-    <p class="text-lg sm:text-xl text-gray-700">Українська Євангельська Церква м. Лаге</p>
-    <nav class="mt-5 sm:mt-6">
-      <ul class="flex flex-wrap justify-center gap-3 sm:gap-4">
-        <li><a href="index.html" class="nav-link">Головна</a></li>
-        <li><a href="about.html" class="nav-link">Про церкву</a></li>
-        <li><a href="schedule.html" class="nav-link">Розклад богослужінь</a></li>
-        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
-        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
-        <li><a href="contacts.html" class="nav-link">Контакти</a></li>
-        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
-      </ul>
-    </nav>
+<body class="bg-gray-50 min-h-screen">
+  <header class="text-center pt-8 pb-6 bg-[#1a365d] shadow-2xl">
+    <div class="max-w-4xl mx-auto px-4">
+      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-28 sm:h-36 w-auto object-contain mb-6">
+      
+      <div class="space-y-1 mb-6">
+        <p class="text-white/80 text-sm sm:text-base uppercase tracking-widest font-light">Ukrainische Evangelische Gemeinde Lage</p>
+        <p class="text-orange-400 text-lg sm:text-xl font-medium">Українська Євангельська Церква м. Лаге</p>
+      </div>
+
+      <nav class="mt-8">
+        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+          <li><a href="index.html" class="nav-link active-link">Головна</a></li>
+          <li><a href="about.html" class="nav-link">Про церкву</a></li>
+          <li><a href="schedule.html" class="nav-link">Розклад</a></li>
+          <li><a href="groups.html" class="nav-link">Групи</a></li>
+          <li><a href="gallery.html" class="nav-link">Медіа</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакти</a></li>
+          <li><a href="donate.html" class="nav-link">Пожертви</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main class="px-4 py-8 sm:py-10 max-w-3xl mx-auto main-content">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-center">Ласкаво просимо до нашої Церкви!</h1>
 
-    <div class="contact-section mb-12 sm:mb-16">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4">Про нас: Дім далеко від дому</h2>
-      <p>Ми – жива та дружня українська християнська громада, що знайшла свій духовний дім тут, у Німеччині. Нас об'єднує глибока любов до Бога, щире бажання служити ближньому та спільна українська душа. Наша церква – це не просто місце зустрічей; це простір, де Бог торкається сердець та змінює життя на краще. Ми віримо, що саме тут, у колі однодумців, кожен може віднайти справжню підтримку, непохитну надію та безмежну любов, якої так прагне душа.</p>
+  <main class="px-4 py-12 max-w-4xl mx-auto main-content">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-10 text-center text-[#1a365d]">Ласкаво просимо до нашої Церкви!</h1>
+
+    <div class="grid gap-8">
+      <div class="contact-section">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fas fa-home text-[#F6931E] mr-3"></i>Про нас: Дім далеко від дому
+        </h2>
+        <p>Ми – жива та дружня українська християнська громада, що знайшла свій духовний дім тут, у Німеччині. Нас об'єднує глибока любов до Бога, щире бажання служити ближньому та спільна українська душа.</p>
+      </div>
+
+      <div class="contact-section">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fas fa-heart text-[#F6931E] mr-3"></i>Чим ми живемо та що робимо?
+        </h2>
+        <ul class="list-none space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1.5 mr-3"></i>
+            <span><strong>Ділимося Благою Звісткою:</strong> Ми з радістю проповідуємо Євангеліє – вічно актуальну звістку про спасіння через віру в Ісуса Христа.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1.5 mr-3"></i>
+            <span><strong>Єднаємось у молитві:</strong> Спільна молитва – це серце нашої громади за наші родини та мир в Україні.</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1.5 mr-3"></i>
+            <span><strong>Підтримуємо один одного:</strong> Надаємо духовну, емоційну та практичну допомогу кожному, хто її потребує.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-section">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fas fa-eye text-[#F6931E] mr-3"></i>Наше бачення
+        </h2>
+        <p>Ми переконані, що Церква – це не стіни, а люди. Любов – це універсальна мова, а віра – живий зв'язок з Христом, що ґрунтується на Біблії.</p>
+      </div>
     </div>
 
-    <div class="contact-section mb-12 sm:mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Чим ми живемо та що робимо?</h2>
-      <p>Наша діяльність наповнена вірою, спілкуванням та служінням:</p>
-      <ul>
-        <li><strong>Ділимося Благою Звісткою:</strong> Ми з радістю проповідуємо Євангеліє – вічно актуальну звістку про спасіння, надію та нове життя через віру в Ісуса Христа.</li>
-        <li><strong>Єднаємось у молитві:</strong> Спільна молитва – це серце нашої громади. Ми молимось за наші родини, за мир та благословення для України, за зцілення хворих, за потреби кожного члена нашої церковної сім'ї та за весь світ.</li>
-        <li><strong>Підтримуємо один одного на кожному кроці:</strong> Ми прагнемо бути поруч у радості та в скруті, надаючи духовну, емоційну та практичне допомогу. У нас ви знайдете відкриті серця та готовність вислухати.</li>
-        <li><strong>Створюємо простір для кожного:</strong> Ми організовуємо різноманітні зустрічі та заходи, що відповідають інтересам та потребам різних груп: натхненні молодіжні зібрання, цікаві заняття для дітей, теплі сестринські спілкування для жінок та змістовні зустрічі для чоловіків.</li>
-      </ul>
+    <div class="text-center mt-12 px-6">
+      <p class="text-lg italic text-gray-600">Незалежно від вашого віку чи минулого – наші двері та серця завжди відкриті для вас.</p>
+      <p class="final-invitation">Чекаємо на зустріч з вами!</p>
     </div>
-
-    <div class="contact-section mb-12 sm:mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Наше бачення: Церква – це ми</h2>
-      <p>Ми глибоко переконані, що:</p>
-      <ul>
-        <li><strong>Церква – це не стіни, а люди,</strong> об'єднані спільною вірою та любов'ю. Кожен із нас – важлива частина великої Божої родини.</li>
-        <li><strong>Любов – це універсальна мова,</strong> яку розуміє кожне серце, незалежно від походження чи життєвих обставин. Саме любов є основою наших стосунків.</li>
-        <li><strong>Віра для нас – це живий та особистий зв'язок з Ісусом Христом, що ґрунтується на непохитній довірі до Святого Письма – Біблії, як до Божого Слова.</strong> Це шлях, яким ми крокуємо не поодинці, а як спільнота відроджених вірою людей, об'єднаних у помісну церкву. Разом ми зростаємо у пізнанні Бога, навчаючись жити згідно з Його заповідями, підтримуємо один одного в слідуванні за Христом та з радістю ділимося надією на спасіння, яку знайшли, з усіма оточуючими.</li>
-      </ul>
-    </div>
-
-    <p class="mt-8 sm:mt-10 font-semibold">Відкрийте своє серце для більшого!</p>
-    <p>Ми щиро запрошуємо вас стати частиною нашої громади. Незалежно від вашого віку, життєвого досвіду чи минулого – наші двері та серця завжди відкриті для вас. Приходьте, щоб разом зростати у вірі, знаходити нових друзів та відчути справжню радість спілкування з Богом та один з одним.</p>
-    
-    <p class="final-invitation">Чекаємо на зустріч з вами!</p>
   </main>
-  <footer class="text-center text-sm py-6 sm:py-8 bg-white mt-12 sm:mt-16 shadow-inner">
-    <p class="text-gray-600">© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
+
+  <footer class="text-center text-sm py-10 bg-[#1a365d] text-white/70 mt-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <p>© <span id="year"></span> U.E.G.Lage | Українська Євангельська Церква м. Лаге</p>
+      <p class="mt-2 text-xs opacity-50">Feldstraße 53, 32791 Lage</p>
+    </div>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
