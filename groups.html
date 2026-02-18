@@ -13,21 +13,31 @@
     .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
     .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
     
-    /* Покращений стиль карток */
+    /* Стиль карток */
     .group-card { 
-      @apply bg-white p-6 rounded-xl shadow-md border-l-8 border-[#F6931E] mb-6 transition-all duration-300; 
-      border-top: 1px solid #edf2f7;
+      @apply bg-white p-6 rounded-xl shadow-md border-l-4 border-[#F6931E] mb-4 transition-all duration-300; 
     }
     .group-card:hover {
-      @apply shadow-xl transform -translate-y-1;
+      @apply shadow-lg transform translate-x-1;
       background-color: #fffaf5;
     }
-    .icon-style {
-      @apply text-[#F6931E] mr-3 w-5 text-center;
+    
+    /* Розділювач днів */
+    .day-section {
+      @apply relative py-8;
     }
-    .day-title {
-      @apply flex items-center text-xl font-bold mb-6 mt-12 uppercase tracking-wide border-b-2 border-gray-200 pb-2;
+    .day-section:not(:last-child):after {
+      content: "";
+      @apply absolute bottom-0 left-0 w-full h-px bg-gray-200 shadow-sm;
     }
+    
+    .day-header {
+      @apply flex items-center text-[#1a365d] text-xl font-bold mb-6 uppercase tracking-wider;
+    }
+    .day-header i { @apply text-[#F6931E] mr-3; }
+    
+    .info-item { @apply flex items-center text-gray-600 mt-2; }
+    .info-item i { @apply text-[#F6931E] w-5 mr-3 text-center text-sm; }
     
     header { background-color: #1a365d; }
   </style>
@@ -48,73 +58,61 @@
   </header>
 
   <main class="px-4 py-16 max-w-4xl mx-auto">
-    <h2 class="text-3xl sm:text-4xl font-extrabold mb-12 text-center">Малі домашні групи</h2>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-center">Малі домашні групи</h2>
+    <p class="text-center text-gray-500 mb-12 italic">Приєднуйтесь до спілкування у вашому місті</p>
 
-    <h3 class="day-title text-[#1a365d]"><i class="far fa-calendar-alt mr-3"></i>Щосереди:</h3>
-    
-    <div class="group-card">
-      <p class="text-xl font-bold mb-3 text-[#1a365d]">Валерій Марковський</p>
-      <div class="space-y-2">
-        <p class="flex items-center text-gray-700"><i class="fas fa-map-marker-alt icon-style"></i>Feldstraße 53, Lage</p>
-        <p class="flex items-center text-gray-700"><i class="far fa-clock icon-style"></i>18:30</p>
+    <section class="day-section">
+      <h3 class="day-header"><i class="fas fa-calendar-day"></i> Щосереди</h3>
+      
+      <div class="group-card">
+        <p class="text-lg font-bold text-[#1a365d]">Валерій Марковський</p>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Feldstraße 53, Lage</div>
+        <div class="info-item"><i class="far fa-clock"></i> 18:30</div>
       </div>
-    </div>
 
-    <div class="group-card">
-      <p class="text-xl font-bold mb-3 text-[#1a365d]">В. Сивульський, В. Вірич</p>
-      <div class="space-y-2">
-        <p class="flex items-center text-gray-700"><i class="fas fa-map-marker-alt icon-style"></i>Brunsheide 3, Leopoldshöhe</p>
-        <p class="flex items-center text-gray-700"><i class="far fa-clock icon-style"></i>19:00</p>
+      <div class="group-card">
+        <p class="text-lg font-bold text-[#1a365d]">В. Сивульський, В. Вірич</p>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Brunsheide 3, Leopoldshöhe</div>
+        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
       </div>
-    </div>
+    </section>
 
-    <h3 class="day-title text-[#1a365d]"><i class="far fa-calendar-alt mr-3"></i>Щочетверга:</h3>
-    
-    <div class="group-card">
-      <p class="text-xl font-bold mb-3 text-[#1a365d]">Лазорів Михайло, Сергій Кокалко</p>
-      <div class="space-y-2">
-        <p class="flex items-center text-gray-700"><i class="fas fa-map-marker-alt icon-style"></i>Paulinenstraße 18, Lage</p>
-        <p class="flex items-center text-gray-700"><i class="far fa-clock icon-style"></i>19:00</p>
+    <section class="day-section">
+      <h3 class="day-header"><i class="fas fa-calendar-day"></i> Щочетверга</h3>
+      
+      <div class="group-card">
+        <p class="text-lg font-bold text-[#1a365d]">Лазорів Михайло, Сергій Кокалко</p>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Paulinenstraße 18, Lage</div>
+        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
       </div>
-    </div>
 
-    <div class="group-card">
-      <p class="text-xl font-bold mb-3 text-[#1a365d]">Георгій Бодров, Віктор Корнійчук</p>
-      <div class="space-y-2">
-        <p class="flex items-center text-gray-700"><i class="fas fa-map-marker-alt icon-style"></i>Pottenhauser Str. 3, Lage</p>
-        <p class="flex items-center text-gray-700"><i class="far fa-clock icon-style"></i>19:00</p>
+      <div class="group-card">
+        <p class="text-lg font-bold text-[#1a365d]">Георгій Бодров, Віктор Корнійчук</p>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Pottenhauser Str. 3, Lage</div>
+        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
       </div>
-    </div>
 
-    <div class="group-card">
-      <p class="text-xl font-bold mb-3 text-[#1a365d]">Богдан Коваль</p>
-      <div class="space-y-2">
-        <p class="flex items-center text-gray-700"><i class="fas fa-map-marker-alt icon-style"></i>Feldstraße 53, Lage</p>
-        <p class="flex items-center text-gray-700"><i class="far fa-clock icon-style"></i>18:30</p>
-      </div>
-    </div>
 
-    <div class="group-card">
-      <p class="text-xl font-bold mb-3 text-[#1a365d]">Віктор Іванюк</p>
-      <div class="space-y-2">
-        <p class="flex items-center text-gray-700"><i class="fas fa-map-marker-alt icon-style"></i>Südstraße 36, Bielefeld</p>
-        <p class="flex items-center text-gray-700"><i class="far fa-clock icon-style"></i>19:00</p>
+      <div class="group-card">
+        <p class="text-lg font-bold text-[#1a365d]">Віктор Іванюк</p>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Südstraße 36, Bielefeld</div>
+        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
       </div>
-    </div>
+    </section>
 
-    <h3 class="day-title text-[#1a365d]"><i class="far fa-calendar-alt mr-3"></i>Щоп'ятниці:</h3>
-    
-    <div class="group-card">
-      <p class="text-xl font-bold mb-3 text-[#1a365d]">Віталій Музичук, Микола Якубовський</p>
-      <div class="space-y-2">
-        <p class="flex items-center text-gray-700"><i class="fas fa-map-marker-alt icon-style"></i>Pivitsheider Str. 30, Augustdorf</p>
-        <p class="flex items-center text-gray-700"><i class="far fa-clock icon-style"></i>19:00</p>
+    <section class="day-section">
+      <h3 class="day-header"><i class="fas fa-calendar-day"></i> Щоп'ятниці</h3>
+      
+      <div class="group-card">
+        <p class="text-lg font-bold text-[#1a365d]">Віталій Музичук, Микола Якубовський</p>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Pivitsheider Str. 30, Augustdorf</div>
+        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
       </div>
-    </div>
+    </section>
 
   </main>
 
-  <footer class="text-center py-10 bg-[#1a365d] text-white mt-16 shadow-inner">
+  <footer class="text-center py-10 bg-[#1a365d] text-white mt-16">
     <p>© <span id="year"></span> U.E.G.Lage</p>
   </footer>
 
