@@ -12,39 +12,116 @@
     h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
     .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
     .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
+    
     .contact-card { @apply bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#F6931E] mb-8; }
+    
+    /* Месенджери */
+    .social-icon { @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-white mr-2 text-sm; }
+    .whatsapp { background-color: #25D366; }
+    .viber { background-color: #7360F2; }
+    .telegram { background-color: #0088cc; }
+    
+    .phone-block { @apply py-4 border-b border-gray-100 last:border-0; }
+    
     header { background-color: #1a365d; }
+    
+    /* Стиль для карти */
+    .map-container {
+      @apply relative overflow-hidden rounded-xl shadow-lg mt-6 grayscale transition-all duration-500;
+      height: 300px;
+    }
+    .map-container:hover { @apply grayscale-0; }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
   <header class="text-center pt-10 pb-10 shadow-2xl">
-    <div class="max-w-6xl mx-auto px-4"><img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
-      <nav><ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
-        <li><a href="index.html" class="nav-link">Головна</a></li>
-        <li><a href="about.html" class="nav-link">Про церкву</a></li>
-        <li><a href="schedule.html" class="nav-link">Розклад</a></li>
-        <li><a href="groups.html" class="nav-link">Малі групи</a></li>
-        <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
-        <li><a href="contacts.html" class="nav-link active-link">Контакти</a></li>
-        <li><a href="donate.html" class="nav-link">Пожертви</a></li>
-      </ul></nav>
+    <div class="max-w-6xl mx-auto px-4">
+      <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
+      <nav>
+        <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
+          <li><a href="index.html" class="nav-link">Головна</a></li>
+          <li><a href="about.html" class="nav-link">Про церкву</a></li>
+          <li><a href="schedule.html" class="nav-link">Розклад</a></li>
+          <li><a href="groups.html" class="nav-link">Малі групи</a></li>
+          <li><a href="gallery.html" class="nav-link">Фото / відео</a></li>
+          <li><a href="contacts.html" class="nav-link active-link">Контакти</a></li>
+          <li><a href="donate.html" class="nav-link">Пожертви</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
+
   <main class="px-4 py-16 max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-10 text-center">Контакти</h1>
+    <h1 class="text-4xl font-extrabold mb-12 text-center text-[#1a365d]">Зв'яжіться з нами</h1>
+
     <div class="contact-card">
-      <h3 class="text-xl font-bold mb-4">Телефони:</h3>
-      <p class="mb-4"><strong>Віктор:</strong> +49 151 2050 3835 (WhatsApp) / +380 96 811 3453 (Viber)</p>
-      <p class="mb-4"><strong>Михайло:</strong> +380 97 940 0603 (Viber)</p>
-      <p class="mb-4"><strong>Валерій:</strong> +49 170 4154 006 (Telegram) / +380 93 571 4550 (WhatsApp/Viber)</p>
-      <p class="mb-4"><strong>Петро:</strong> +49 151 7281 2211 (WhatsApp) / +380 50 493 9608 (Viber)</p>
+      <h3 class="text-2xl font-bold mb-6 flex items-center">
+        <i class="fas fa-phone-alt mr-3 text-[#F6931E]"></i> Телефони
+      </h3>
+      
+      <div class="phone-block">
+        <p class="font-bold text-lg mb-2 text-[#1a365d]">Віктор</p>
+        <div class="space-y-2">
+          <p class="flex items-center"><span class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></span> +49 151 2050 3835</p>
+          <p class="flex items-center"><span class="social-icon viber"><i class="fab fa-viber"></i></span> +380 96 811 3453</p>
+        </div>
+      </div>
+
+      <div class="phone-block">
+        <p class="font-bold text-lg mb-2 text-[#1a365d]">Михайло</p>
+        <p class="flex items-center"><span class="social-icon viber"><i class="fab fa-viber"></i></span> +380 97 940 0603</p>
+      </div>
+
+      <div class="phone-block">
+        <p class="font-bold text-lg mb-2 text-[#1a365d]">Валерій</p>
+        <div class="space-y-2">
+          <p class="flex items-center"><span class="social-icon telegram"><i class="fab fa-telegram-plane"></i></span> +49 170 4154 006</p>
+          <p class="flex items-center">
+            <span class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></span>
+            <span class="social-icon viber"><i class="fab fa-viber"></i></span> 
+            +380 93 571 4550
+          </p>
+        </div>
+      </div>
+
+      <div class="phone-block">
+        <p class="font-bold text-lg mb-2 text-[#1a365d]">Петро</p>
+        <div class="space-y-2">
+          <p class="flex items-center"><span class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></span> +49 151 7281 2211</p>
+          <p class="flex items-center"><span class="social-icon viber"><i class="fab fa-viber"></i></span> +380 50 493 9608</p>
+        </div>
+      </div>
     </div>
+
     <div class="contact-card">
-      <h3 class="text-xl font-bold mb-4">Адреса та пошта:</h3>
-      <p class="mb-2"><i class="fas fa-envelope mr-2"></i> u.e.g.lage@gmail.com</p>
-      <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-red-500"></i> Feldstraße 53, 32791 Lage</p>
+      <h3 class="text-2xl font-bold mb-6 flex items-center">
+        <i class="fas fa-map-marked-alt mr-3 text-[#F6931E]"></i> Адреса та пошта
+      </h3>
+      <div class="space-y-4 mb-8">
+        <a href="mailto:u.e.g.lage@gmail.com" class="flex items-center text-gray-700 hover:text-[#F6931E] transition-colors">
+          <i class="fas fa-envelope mr-3 text-xl w-6"></i> u.e.g.lage@gmail.com
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Feldstraße+53,+32791+Lage" target="_blank" class="flex items-center text-gray-700 hover:text-[#F6931E] transition-colors">
+          <i class="fas fa-map-marker-alt mr-3 text-xl w-6 text-red-500"></i> Feldstraße 53, 32791 Lage
+        </a>
+      </div>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.664424759024!2d8.784400777000216!3d51.99473217482862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3f86e74b2609%3A0xc682245b78f4b5f8!2sFeldstra%C3%9Fe%2053%2C%2032791%20Lage!5e0!3m2!1suk!2sde!4v1700000000000!5m2!1suk!2sde" 
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+      <p class="text-center mt-4 text-sm text-gray-500">Натисніть на карту, щоб відкрити Google Maps</p>
     </div>
   </main>
-  <footer class="text-center py-10 bg-[#1a365d] text-white mt-16 shadow-inner"><p>© <span id="year"></span> U.E.G.Lage</p></footer>
+
+  <footer class="text-center py-10 bg-[#1a365d] text-white mt-16 shadow-inner">
+    <p>© <span id="year"></span> U.E.G.Lage</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
