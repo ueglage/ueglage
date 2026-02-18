@@ -4,124 +4,291 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Малі групи | U.E.G.Lage</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="icon" type="image/png" href="a2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <style>
-    body { font-family: 'Open Sans', sans-serif; color: #2d3748; }
-    h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
-    .nav-link { @apply px-4 py-2 rounded-lg text-white font-bold text-base sm:text-lg transition-all duration-300; color: #ffffff !important; }
-    .active-link { @apply bg-[#F6931E] text-white shadow-lg; }
-    
-    /* Стиль карток */
-    .group-card { 
-      @apply bg-white p-6 rounded-xl shadow-md border-l-4 border-[#F6931E] mb-4 transition-all duration-300; 
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #2d3748;
     }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .nav-link {
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      color: white;
+      transition: all 0.25s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #2c5282;
+    }
+
+    .active-link {
+      background-color: #F6931E;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    }
+
+    .group-card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      border-left: 5px solid #F6931E;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: all 0.25s ease;
+    }
+
     .group-card:hover {
-      @apply shadow-lg transform translate-x-1;
-      background-color: #fffaf5;
+      transform: translateX(6px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.15);
+      background: #fffaf5;
     }
-    
-    /* Розділювач днів */
-    .day-section {
-      @apply relative py-8;
-    }
-    .day-section:not(:last-child):after {
-      content: "";
-      @apply absolute bottom-0 left-0 w-full h-px bg-gray-200 shadow-sm;
-    }
-    
+
     .day-header {
-      @apply flex items-center text-[#1a365d] text-xl font-bold mb-6 uppercase tracking-wider;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a365d;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .day-header i { @apply text-[#F6931E] mr-3; }
-    
-    .info-item { @apply flex items-center text-gray-600 mt-2; }
-    .info-item i { @apply text-[#F6931E] w-5 mr-3 text-center text-sm; }
-    
-    header { background-color: #1a365d; }
+
+    .info-row {
+      margin-top: 6px;
+      color: #4a5568;
+    }
+
+    .info-row i {
+      color: #F6931E;
+      width: 22px;
+    }
+
+    .day-section {
+      margin-top: 40px;
+    }
   </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-<header class="text-center pt-10 pb-10 shadow-2xl">
-  <div class="max-w-6xl mx-auto px-4">
-    <img src="a2.png" alt="U.E.G.Lage" class="mx-auto h-32 sm:h-44 w-auto object-contain mb-8">
 
-    <nav>
-      <ul class="flex flex-wrap justify-center gap-2 sm:gap-4">
-        <li><a href="index.html" class="px-4 py-2 rounded-lg text-white font-bold">Головна</a></li>
-        <li><a href="about.html" class="px-4 py-2 rounded-lg text-white font-bold">Про церкву</a></li>
-        <li><a href="schedule.html" class="px-4 py-2 rounded-lg text-white font-bold">Розклад</a></li>
-        <li><a href="groups.html" class="px-4 py-2 rounded-lg bg-[#F6931E] text-white font-bold shadow-lg">Малі групи</a></li>
-        <li><a href="gallery.html" class="px-4 py-2 rounded-lg text-white font-bold">Фото / відео</a></li>
-        <li><a href="contacts.html" class="px-4 py-2 rounded-lg text-white font-bold">Контакти</a></li>
-         <li><a href="donate.html" class="px-4 py-2 rounded-lg text-white font-bold">Пожертви</a></li>
-      </ul>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+<!-- HEADER -->
+<header class="bg-[#1a365d] shadow-xl">
+
+  <div class="max-w-6xl mx-auto px-4 py-8 text-center">
+
+    <img src="a2.png"
+         class="mx-auto h-28 sm:h-36 mb-6">
+
+    <nav class="flex flex-wrap justify-center gap-3">
+
+      <a href="index.html" class="nav-link">Головна</a>
+
+      <a href="about.html" class="nav-link">Про церкву</a>
+
+      <a href="schedule.html" class="nav-link">Розклад</a>
+
+      <a href="groups.html" class="nav-link active-link">Малі групи</a>
+
+      <a href="gallery.html" class="nav-link">Фото / відео</a>
+
+      <a href="contacts.html" class="nav-link">Контакти</a>
+
+      <a href="donate.html" class="nav-link">Пожертви</a>
+
     </nav>
+
   </div>
+
 </header>
 
-  <main class="px-4 py-16 max-w-4xl mx-auto">
-    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-center">Малі домашні групи</h2>
-    <p class="text-center text-gray-500 mb-12 italic">Приєднуйтесь до спілкування у вашому місті</p>
 
-    <section class="day-section">
-      <h3 class="day-header"><i class="fas fa-calendar-day"></i> Щосереди</h3>
-      
-      <div class="group-card">
-        <p class="text-lg font-bold text-[#1a365d]">Валерій Марковський</p>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Feldstraße 53, Lage</div>
-        <div class="info-item"><i class="far fa-clock"></i> 18:30</div>
-      </div>
+<!-- MAIN -->
+<main class="flex-grow max-w-4xl mx-auto px-4 py-14">
 
-      <div class="group-card">
-        <p class="text-lg font-bold text-[#1a365d]">В. Сивульський, В. Вірич</p>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Brunsheide 3, Leopoldshöhe</div>
-        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
-      </div>
-    </section>
+  <h1 class="text-3xl sm:text-4xl font-extrabold text-center text-[#1a365d] mb-4">
+    Малі домашні групи
+  </h1>
 
-    <section class="day-section">
-      <h3 class="day-header"><i class="fas fa-calendar-day"></i> Щочетверга</h3>
-      
-      <div class="group-card">
-        <p class="text-lg font-bold text-[#1a365d]">Лазорів Михайло</p>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Paulinenstraße 18, Lage</div>
-        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
-      </div>
+  <p class="text-center text-gray-500 mb-10 italic">
+    Приєднуйтесь до спілкування та духовного зростання
+  </p>
+
+
+  <!-- СЕРЕДА -->
+  <section class="day-section">
+
+    <div class="day-header">
+      <i class="fas fa-calendar-day"></i>
+      Щосереди
+    </div>
+
+    <div class="space-y-4">
 
       <div class="group-card">
-        <p class="text-lg font-bold text-[#1a365d]">Георгій Бодров, Віктор Корнійчук</p>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Pottenhauser Str. 3, Lage</div>
-        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
+        <div class="font-bold text-lg text-[#1a365d]">
+          Валерій Марковський
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-map-marker-alt"></i>
+          Feldstraße 53, Lage
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-clock"></i>
+          18:30
+        </div>
       </div>
 
 
       <div class="group-card">
-        <p class="text-lg font-bold text-[#1a365d]">Віктор Іванюк</p>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Südstraße 36, Bielefeld</div>
-        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
-      </div>
-    </section>
+        <div class="font-bold text-lg text-[#1a365d]">
+          В. Сивульський, В. Вірич
+        </div>
 
-    <section class="day-section">
-      <h3 class="day-header"><i class="fas fa-calendar-day"></i> Щоп'ятниці</h3>
-      
+        <div class="info-row">
+          <i class="fas fa-map-marker-alt"></i>
+          Brunsheide 3, Leopoldshöhe
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-clock"></i>
+          19:00
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ЧЕТВЕР -->
+  <section class="day-section">
+
+    <div class="day-header">
+      <i class="fas fa-calendar-day"></i>
+      Щочетверга
+    </div>
+
+    <div class="space-y-4">
+
       <div class="group-card">
-        <p class="text-lg font-bold text-[#1a365d]">Віталій Музичук</p>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Pivitsheider Str. 30, Augustdorf</div>
-        <div class="info-item"><i class="far fa-clock"></i> 19:00</div>
+        <div class="font-bold text-lg text-[#1a365d]">
+          Лазорів Михайло
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-map-marker-alt"></i>
+          Paulinenstraße 18, Lage
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-clock"></i>
+          19:00
+        </div>
       </div>
-    </section>
 
-  </main>
 
-  <footer class="text-center py-10 bg-[#1a365d] text-white mt-16">
-    <p>© <span id="year"></span> U.E.G.Lage</p>
-  </footer>
+      <div class="group-card">
+        <div class="font-bold text-lg text-[#1a365d]">
+          Георгій Бодров, Віктор Корнійчук
+        </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+        <div class="info-row">
+          <i class="fas fa-map-marker-alt"></i>
+          Pottenhauser Str. 3, Lage
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-clock"></i>
+          19:00
+        </div>
+      </div>
+
+
+      <div class="group-card">
+        <div class="font-bold text-lg text-[#1a365d]">
+          Віктор Іванюк
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-map-marker-alt"></i>
+          Südstraße 36, Bielefeld
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-clock"></i>
+          19:00
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ПʼЯТНИЦЯ -->
+  <section class="day-section">
+
+    <div class="day-header">
+      <i class="fas fa-calendar-day"></i>
+      Щоп'ятниці
+    </div>
+
+    <div class="space-y-4">
+
+      <div class="group-card">
+        <div class="font-bold text-lg text-[#1a365d]">
+          Віталій Музичук
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-map-marker-alt"></i>
+          Pivitsheider Str. 30, Augustdorf
+        </div>
+
+        <div class="info-row">
+          <i class="fas fa-clock"></i>
+          19:00
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#1a365d] text-white text-center py-8">
+
+  <div class="text-sm text-gray-300">
+    © <span id="year"></span> U.E.G.Lage
+  </div>
+
+</footer>
+
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
 </body>
 </html>
