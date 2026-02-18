@@ -6,7 +6,7 @@
   <title>Контакти | U.E.G.Lage</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="a2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     body { font-family: 'Open Sans', sans-serif; color: #2d3748; }
     h1, h2, h3 { font-family: 'Poppins', sans-serif; color: #1a365d; }
@@ -16,19 +16,18 @@
     
     .contact-card { @apply bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#F6931E] mb-8; }
     
-    /* Професійні кольори месенджерів */
-    .btn-messenger { @apply inline-flex items-center justify-center w-10 h-10 rounded-full text-white transition-all duration-300 shadow-sm hover:scale-110 hover:shadow-md mr-3; }
-    .whatsapp { background-color: #25D366; }
-    .viber { background-color: #7360F2; }
-    .telegram { background-color: #0088cc; }
+    /* Стилі для оригінальних іконок */
+    .icon-box { @apply inline-flex items-center justify-center w-10 h-10 rounded-full text-white transition-all duration-300 shadow-sm hover:scale-110 mr-3; }
+    .whatsapp-bg { background-color: #25D366; }
+    .viber-bg { background-color: #7360F2; }
+    .telegram-bg { background-color: #0088cc; }
     
-    .phone-row { @apply flex items-center mb-4 py-3 border-b border-gray-50 last:border-0; }
-    .contact-info { @apply flex flex-col; }
-    .contact-name { @apply text-xl font-bold text-[#1a365d] mb-1; }
-    .phone-number { @apply text-gray-700 font-medium tracking-wide; }
+    .phone-entry { @apply flex flex-col md:flex-row md:items-center py-4 border-b border-gray-100 last:border-0; }
+    .name-label { @apply text-xl font-bold text-[#1a365d] w-32 mb-2 md:mb-0; }
+    .messenger-link { @apply flex items-center mr-6 mb-2 md:mb-0 hover:opacity-80 transition-opacity; }
+    .number-text { @apply font-medium text-gray-700; }
 
-    /* Карта */
-    .map-wrapper { @apply mt-6 rounded-xl overflow-hidden shadow-inner border border-gray-200; height: 350px; }
+    .map-container { @apply mt-6 rounded-xl overflow-hidden shadow-inner border border-gray-200; height: 350px; }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -54,95 +53,85 @@
 
     <div class="contact-card">
       <h3 class="text-2xl font-bold mb-6 flex items-center text-[#1a365d]">
-        <i class="fas fa-headset mr-3 text-[#F6931E]"></i> Наші телефони
+        <i class="fa-solid fa-phone mr-3 text-[#F6931E]"></i> Наші телефони
       </h3>
 
-      <div class="phone-row">
-        <div class="contact-info w-full">
-          <span class="contact-name">Віктор</span>
-          <div class="flex flex-wrap gap-4 mt-2">
-            <a href="https://wa.me/4915120503835" target="_blank" class="flex items-center">
-              <span class="btn-messenger whatsapp"><i class="fab fa-whatsapp text-xl"></i></span>
-              <span class="phone-number">+49 151 2050 3835</span>
-            </a>
-            <a href="viber://chat?number=%2B380968113453" class="flex items-center">
-              <span class="btn-messenger viber"><i class="fab fa-viber text-xl"></i></span>
-              <span class="phone-number">+380 96 811 3453</span>
-            </a>
-          </div>
+      <div class="phone-entry">
+        <span class="name-label">Віктор</span>
+        <div class="flex flex-col sm:flex-row sm:flex-wrap">
+          <a href="https://wa.me/4915120503835" target="_blank" class="messenger-link">
+            <span class="icon-box whatsapp-bg"><i class="fa-brands fa-whatsapp text-xl"></i></span>
+            <span class="number-text">+49 151 2050 3835</span>
+          </a>
+          <a href="viber://chat?number=%2B380968113453" class="messenger-link">
+            <span class="icon-box viber-bg"><i class="fa-brands fa-viber text-xl"></i></span>
+            <span class="number-text">+380 96 811 3453</span>
+          </a>
         </div>
       </div>
 
-      <div class="phone-row">
-        <div class="contact-info w-full">
-          <span class="contact-name">Михайло</span>
-          <div class="flex mt-2">
-            <a href="viber://chat?number=%2B380979400603" class="flex items-center">
-              <span class="btn-messenger viber"><i class="fab fa-viber text-xl"></i></span>
-              <span class="phone-number">+380 97 940 0603</span>
-            </a>
-          </div>
-        </div>
+      <div class="phone-entry">
+        <span class="name-label">Михайло</span>
+        <a href="viber://chat?number=%2B380979400603" class="messenger-link">
+          <span class="icon-box viber-bg"><i class="fa-brands fa-viber text-xl"></i></span>
+          <span class="number-text">+380 97 940 0603</span>
+        </a>
       </div>
 
-      <div class="phone-row">
-        <div class="contact-info w-full">
-          <span class="contact-name">Валерій</span>
-          <div class="flex flex-wrap gap-4 mt-2">
-            <a href="https://t.me/+491704154006" target="_blank" class="flex items-center">
-              <span class="btn-messenger telegram"><i class="fab fa-telegram-plane text-xl"></i></span>
-              <span class="phone-number">+49 170 4154 006</span>
-            </a>
-            <div class="flex items-center">
-              <div class="flex">
-                <a href="https://wa.me/380935714550" target="_blank" class="btn-messenger whatsapp mr-1"><i class="fab fa-whatsapp text-lg"></i></a>
-                <a href="viber://chat?number=%2B380935714550" class="btn-messenger viber mr-3"><i class="fab fa-viber text-lg"></i></a>
-              </div>
-              <span class="phone-number">+380 93 571 4550</span>
+      <div class="phone-entry">
+        <span class="name-label">Валерій</span>
+        <div class="flex flex-col sm:flex-row sm:flex-wrap">
+          <a href="https://t.me/+491704154006" target="_blank" class="messenger-link">
+            <span class="icon-box telegram-bg"><i class="fa-brands fa-telegram text-xl"></i></span>
+            <span class="number-text">+49 170 4154 006</span>
+          </a>
+          <div class="flex items-center">
+            <div class="flex mr-3">
+              <a href="https://wa.me/380935714550" target="_blank" class="icon-box whatsapp-bg !mr-1 w-8 h-8"><i class="fa-brands fa-whatsapp text-base"></i></a>
+              <a href="viber://chat?number=%2B380935714550" class="icon-box viber-bg !mr-0 w-8 h-8"><i class="fa-brands fa-viber text-base"></i></a>
             </div>
+            <span class="number-text">+380 93 571 4550</span>
           </div>
         </div>
       </div>
 
-      <div class="phone-row">
-        <div class="contact-info w-full">
-          <span class="contact-name">Петро</span>
-          <div class="flex flex-wrap gap-4 mt-2">
-            <a href="https://wa.me/4915172812211" target="_blank" class="flex items-center">
-              <span class="btn-messenger whatsapp"><i class="fab fa-whatsapp text-xl"></i></span>
-              <span class="phone-number">+49 151 7281 2211</span>
-            </a>
-            <a href="viber://chat?number=%2B380504939608" class="flex items-center">
-              <span class="btn-messenger viber"><i class="fab fa-viber text-xl"></i></span>
-              <span class="phone-number">+380 50 493 9608</span>
-            </a>
-          </div>
+      <div class="phone-entry">
+        <span class="name-label">Петро</span>
+        <div class="flex flex-col sm:flex-row sm:flex-wrap">
+          <a href="https://wa.me/4915172812211" target="_blank" class="messenger-link">
+            <span class="icon-box whatsapp-bg"><i class="fa-brands fa-whatsapp text-xl"></i></span>
+            <span class="number-text">+49 151 7281 2211</span>
+          </a>
+          <a href="viber://chat?number=%2B380504939608" class="messenger-link">
+            <span class="icon-box viber-bg"><i class="fa-brands fa-viber text-xl"></i></span>
+            <span class="number-text">+380 50 493 9608</span>
+          </a>
         </div>
       </div>
     </div>
 
     <div class="contact-card">
       <h3 class="text-2xl font-bold mb-6 flex items-center text-[#1a365d]">
-        <i class="fas fa-map-marker-alt mr-3 text-[#F6931E]"></i> Локація та пошта
+        <i class="fa-solid fa-envelope mr-3 text-[#F6931E]"></i> Адреса та пошта
       </h3>
       <div class="space-y-4 mb-6">
         <p class="text-lg flex items-center">
-          <i class="fas fa-envelope mr-3 text-gray-400"></i> 
+          <i class="fa-solid fa-envelope mr-4 text-gray-400"></i> 
           <a href="mailto:u.e.g.lage@gmail.com" class="hover:text-[#F6931E] transition-colors">u.e.g.lage@gmail.com</a>
         </p>
         <p class="text-lg flex items-center font-bold text-[#1a365d]">
-          <i class="fas fa-map-pin mr-4 text-red-500"></i> Feldstraße 53, 32791 Lage
+          <i class="fa-solid fa-location-dot mr-5 text-red-500"></i> Feldstraße 53, 32791 Lage
         </p>
       </div>
 
-      <div class="map-wrapper">
+      <div class="map-container">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.6366539151613!2d8.788556676837135!3d51.94821417772718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba47864c3c3a91%3A0x67318728a3818e3!2sFeldstra%C3%9Fe%2053%2C%2032791%20Lage!5e0!3m2!1suk!2sde!4v1700000000000!5m2!1suk!2sde" 
+          src="http://googleusercontent.com/maps.google.com/4" 
           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
       </div>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Feldstraße+53,32791+Lage" target="_blank" class="block text-center mt-4 text-[#F6931E] font-bold hover:underline">
-        <i class="fas fa-directions mr-1"></i> Прокласти маршрут у Google Maps
+      <a href="http://googleusercontent.com/maps.google.com/5" target="_blank" class="block text-center mt-4 text-[#F6931E] font-bold hover:underline">
+        <i class="fa-solid fa-route mr-1"></i> Прокласти маршрут у Google Maps
       </a>
     </div>
   </main>
